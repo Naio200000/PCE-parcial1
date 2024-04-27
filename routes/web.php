@@ -4,10 +4,10 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [\App\Http\Controllers\HomeController::class,'home']);
+Route::get('nostros', [\App\Http\Controllers\HomeController::class,'about']);
+Route::get('contactos', [\App\Http\Controllers\HomeController::class,'contacts']);
 
-Route::get('/nostros', function () {
-    return view('about');
-});
+
 
 Route::get('/tienda', function () {
     return view('store.index');
