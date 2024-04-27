@@ -9,3 +9,7 @@ Route::get('/', function () {
 Route::get('/nostros', function () {
     return view('about');
 });
+
+Route::get('/tienda', function () {
+    return view('store');
+});
