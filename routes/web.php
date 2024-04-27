@@ -11,5 +11,5 @@ Route::get('/nostros', function () {
 });
 
 Route::get('/tienda', function () {
-    return view('store');
+    return view('store.index');
 });
