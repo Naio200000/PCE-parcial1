@@ -4,10 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Parcial 1 PCE</title>
+        <title>Parcial 1 PCE:: Nostros</title>
 
     </head>
     <body>
-        <h1>Bienvenidos</h1>
+        <h1>Nosotros</h1>
     </body>
 </html>
