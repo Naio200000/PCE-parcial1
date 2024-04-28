@@ -15,7 +15,7 @@
                         <div id="carouselProductoImagen" class="carousel slide mx-auto" data-bs-ride="true">
                             <div class="carousel-inner p-5" id="carrusel-producto">
                                 <div class="carousel-item active">
-                                    <img class="card-img-top" src="{{'img/productos/'. $producto->image}}" alt="{{$producto->altImage}}">
+                                    <img class="card-img-top" src="{{'../../img/productos/' . $producto->image}}" alt="{{$producto->altImage}}">
                                 </div>
                             </div>
                         </div>
@@ -27,7 +27,7 @@
                             <p class="card-text fs-5">{{$producto->descript}}</p>
                         </div>
                         <div class="card-body flex-grow-0 mt-auto" id="botonProducto">
-                            <p class="fs-3 mb-3 fw-bold text-center preciocard">{{$producto->precio}}</p>
+                            <p class="fs-3 mb-3 fw-bold text-center preciocard">{{$producto->price}}</p>
                             <form action="admin/acciones/item-acc.php" class="row">
                                 <div class="col-6 d-flex align-items-center">
                                     <label class="px-1" for="cantidad">Cantidad: </label>
