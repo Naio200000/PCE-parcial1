@@ -88,7 +88,7 @@
             <div class="container-md">
                 <div class="row align-items-center">
                     <div class="col col-lg-4 p-1">
-                    {{-- <img class="imagen-perfil footer-perfil" src="./img/misc/perfil.webp" alt="Un señor muy buen moso"> --}}
+                    <img class="imagen-perfil footer-perfil" src="./img/misc/perfil.webp" alt="Un señor muy buen moso">
                     </div>
                     <div class="col">
                         <div class="row">
@@ -99,13 +99,13 @@
                                 <li>nicolas.alsinet@davinci.edu.ar</li>
                             </ul>
                             </div>
-                            {{-- <div class="col-12 col-lg-7">
+                            <div class="col-12 col-lg-7">
                                 <ul class="row social">
                                     <li class="col"><a href="https://www.instagram.com/nicolas.alsinet/" target="_blank"><img src="./img/logo/SVG/Instagram_logo_2016.svg" alt="Logo de Instagram"></a></li>
                                     <li class="col"><a href="https://www.linkedin.com/in/nicolas-alsinet-99a067226/" target="_blank"><img src="./img/logo/SVG/LinkedIn_icon.svg" alt="Logo de linkedin"></a></li>
                                     <li class="col"><a href="https://github.com/Naio200000" target="_blank"><img src="./img/logo/SVG/github_icon.svg" alt="Logo de Github"></a></li>
                                 </ul>
-                            </div> --}}
+                            </div>
                         </div>
                     </div>
                 </div>
