@@ -1,3 +1,10 @@
+<?php
+    /**
+     * @var /App/Models/Producto[] | Illuminate\Database\Eloquent\Collection  $productos
+    */
+    
+?>
+
 <x-template>
 
     <x-slot:title>Tienda::</x-slot>
