@@ -3,7 +3,7 @@
      * @var /App/Models/Producto[] | Illuminate\Database\Eloquent\Collection  $productos
     */
 ?>
-<x-template>
+<x-storeTemplate>
 
     <x-slot:title>Tienda::</x-slot>
 
@@ -42,4 +42,4 @@
             </article>
         </div>
     </section>
-</x-template>
+</x-storeTemplate>

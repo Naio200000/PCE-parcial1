@@ -1,4 +1,4 @@
-<x-template>
+<x-storeTemplate>
     <x-slot:title>Home::</x-slot:title>
     <section class="hero">
         <div id="CarrpuselHero" class="carousel slide" data-bs-ride="carousel">
@@ -30,4 +30,4 @@
         <p class="pe-md-3 fs-5 w-75 mx-auto"><a href="{{route('contactos')}}" class=""><em><b>Contactanos</b></em></a> por cualquier duda que tengas, estamos a tu disposición.</p>
     </section>
 
-</x-template>
+</x-storeTemplate>

@@ -1,4 +1,4 @@
-<x-template>
+<x-storeTemplate>
     <x-slot:title>Contactos::</x-slot:title>
     <section class="dojos container-fluid container-md pb-3" id="dojos">
         <article class="dojos-textos">
@@ -125,4 +125,4 @@
             </div>
         </article>
     </section>
-</x-template>
+</x-storeTemplate>
