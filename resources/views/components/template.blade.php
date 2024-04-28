@@ -12,7 +12,7 @@
         <header class="header">
             <nav class="navbar navbar-expand-md fixed-top container-fluid x-auto ">
                 <div class="nav container align-items-center">
-                    <a class="navbar-brand " href="{{route('home')}}"><img src="./img/logo/komei_Juku.webp" alt="Logo de la escuela"></a>
+                    <a class="navbar-brand " href="{{route('home')}}"><img src="{{url('./img/logo/komei_Juku.webp')}}" alt="Logo de la escuela"></a>
                     <h1 class="titulo text-uppercase text-center">Komei Juku</h1>
                     <button class="navbar-toggler ms-auto m-2" type="button" data-bs-toggle="collapse" data-bs-target="#ContenidoSoporteBarranNav" aria-controls="ContenidoSoporteBarranNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -86,7 +86,7 @@
             <div class="container-md">
                 <div class="row align-items-center">
                     <div class="col col-lg-4 p-1">
-                    <img class="imagen-perfil footer-perfil" src="./img/misc/perfil.webp" alt="Un señor muy buen moso">
+                    <img class="imagen-perfil footer-perfil" src="{{url('./img/misc/perfil.webp')}}" alt="Un señor muy buen moso">
                     </div>
                     <div class="col">
                         <div class="row">
@@ -99,9 +99,9 @@
                             </div>
                             <div class="col-12 col-lg-7">
                                 <ul class="row social">
-                                    <li class="col"><a href="https://www.instagram.com/nicolas.alsinet/" target="_blank"><img src="./img/logo/SVG/Instagram_logo_2016.svg" alt="Logo de Instagram"></a></li>
-                                    <li class="col"><a href="https://www.linkedin.com/in/nicolas-alsinet-99a067226/" target="_blank"><img src="./img/logo/SVG/LinkedIn_icon.svg" alt="Logo de linkedin"></a></li>
-                                    <li class="col"><a href="https://github.com/Naio200000" target="_blank"><img src="./img/logo/SVG/github_icon.svg" alt="Logo de Github"></a></li>
+                                    <li class="col"><a href="https://www.instagram.com/nicolas.alsinet/" target="_blank"><img src="{{url('./img/logo/SVG/Instagram_logo_2016.svg')}}" alt="Logo de Instagram"></a></li>
+                                    <li class="col"><a href="https://www.linkedin.com/in/nicolas-alsinet-99a067226/" target="_blank"><img src="{{url('./img/logo/SVG/LinkedIn_icon.svg')}}" alt="Logo de linkedin"></a></li>
+                                    <li class="col"><a href="https://github.com/Naio200000" target="_blank"><img src="{{url('./img/logo/SVG/github_icon.svg')}}" alt="Logo de Github"></a></li>
                                 </ul>
                             </div>
                         </div>
