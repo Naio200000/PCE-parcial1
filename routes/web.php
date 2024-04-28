@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', [\App\Http\Controllers\HomeController::class,'home']);
-Route::get('nosotros', [\App\Http\Controllers\HomeController::class,'about']);
-Route::get('contactos', [\App\Http\Controllers\HomeController::class,'contacts']);
+Route::get('/', [\App\Http\Controllers\HomeController::class,'home'])->name('home');
+Route::get('nosotros', [\App\Http\Controllers\HomeController::class,'about'])->name('nosotros');
+Route::get('contactos', [\App\Http\Controllers\HomeController::class,'contacts'])->name('contactos');
 
-Route::get('tienda', [\App\Http\Controllers\TiendaController::class, 'index']);
+Route::get('tienda', [\App\Http\Controllers\TiendaController::class, 'index'])->name('tienda.index');

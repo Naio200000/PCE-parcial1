@@ -12,7 +12,7 @@
         <header class="header">
             <nav class="navbar navbar-expand-md fixed-top container-fluid x-auto ">
                 <div class="nav container align-items-center">
-                    <a class="navbar-brand " href="{{url('/')}}"><img src="./img/logo/komei_Juku.webp" alt="Logo de la escuela"></a>
+                    <a class="navbar-brand " href="{{route('home')}}"><img src="./img/logo/komei_Juku.webp" alt="Logo de la escuela"></a>
                     <h1 class="titulo text-uppercase text-center">Komei Juku</h1>
                     <button class="navbar-toggler ms-auto m-2" type="button" data-bs-toggle="collapse" data-bs-target="#ContenidoSoporteBarranNav" aria-controls="ContenidoSoporteBarranNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -37,22 +37,22 @@
                     <div class="collapse navbar-collapse ms-5" id="ContenidoSoporteBarranNav">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active text-center text-sm-end" aria-current="page" href="{{url('/')}}">Home</a>
+                                <a class="nav-link active text-center text-sm-end" aria-current="page" href="{{route('home')}}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active text-center text-sm-end" aria-current="page" href="{{url('/nosotros')}}">Nosotros</a>
+                                <a class="nav-link active text-center text-sm-end" aria-current="page" href="{{route('nosotros')}}">Nosotros</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link active text-center text-sm-end dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="{{url('/tienda')}}">Catalogo Completo</a></li>
+                                    <li><a class="dropdown-item" href="{{route('tienda.index')}}">Catalogo Completo</a></li>
                                     <li><a class="dropdown-item text-capitalize" href="{{url('/tienda/clases')}}">Clases</a></li>
                                     <li><a class="dropdown-item text-capitalize" href="{{url('/tienda/ropa')}}">Ropa</a></li>
                                     <li><a class="dropdown-item text-capitalize" href="{{url('/tienda/equipos')}}">Equipos</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active text-center text-sm-end " aria-current="page" href="{{url('/contactos')}}">Contactos</a>
+                                <a class="nav-link active text-center text-sm-end " aria-current="page" href="{{route('contactos')}}">Contactos</a>
                             </li>
                         </ul>
                     </div>
@@ -119,7 +119,7 @@
                     <p class="modal-title fs-5" id="modalContactoDojosLabel">Mensaje Nuevo</p>
                 </div>
                 <div class="container-fluid ">
-                    <form action="" method="POST">
+                    <form action=" " method="POST">
                         <div class="row align-items-start">
                             <div class="col col-lg-6">
                                 <div class="my-4">
