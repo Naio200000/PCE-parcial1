@@ -16,4 +16,13 @@ class TiendaController extends Controller{
             'productos' => $productos
         ]);
     }
+
+    public function viewProduct () {
+
+        $producto = Producto::find(1);
+
+        return view('store.product', [
+            'producto' => $producto
+        ]);
+    }
 }
