@@ -5,7 +5,7 @@
 ?>
 <x-template>
 
-    <x-slot:title>{{$producto->name . '::'}}</x-slot>
+    <x-slot:title>{{$producto->name . ' :: '}}</x-slot>
     <section class="item container-fluid container-md pb-3">
             <h2 class="titulo-seccion w-75 w-lg-100 text-uppercase text-center fw-bold my-2 mx-auto px-2"></h2>
             <p class="fs-5 w-75 mx-auto fw-bold text-center"></p>
