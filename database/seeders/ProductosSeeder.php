@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ProductosSeeder extends Seeder
 {
@@ -12,6 +13,31 @@ class ProductosSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        DB::table('productos')->insert([
+            [
+                'id' => 1,
+                'name' => '1 Clase grupal',
+                'descript' => 'Disfruta de una clase por semana en los días que ...',
+                'price' => '700000',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'id' => 2,
+                'name' => 'Iaidogi Azul',
+                'descript' => 'Keikogi para entrenamiento, 100% Tetron; Elaborado...',
+                'price' => '500000',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'id' => 3,
+                'name' => 'Bokuto',
+                'descript' => 'Katana de madera para entrenamiento, con saya de p...',
+                'price' => '2000000',
+                'created_at' => now(),
+                'updated_at' => now()
+            ]
+        ]);
     }
 }
