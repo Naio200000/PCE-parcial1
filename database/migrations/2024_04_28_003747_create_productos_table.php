@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('descript');
+            $table->string('image', length: 20);
+            $table->string('category', length: 20);
             $table->unsignedInteger('price');
             $table->timestamps();
         });
