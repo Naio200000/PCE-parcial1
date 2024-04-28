@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>{{ $title }}Tienda Komei</title>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="{{url('css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{url('css/styles.css')}}">
     </head>
     <body>
         <header class="header">
@@ -37,22 +37,22 @@
                     <div class="collapse navbar-collapse ms-5" id="ContenidoSoporteBarranNav">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active text-center text-sm-end" aria-current="page" href="#">Home</a>
+                                <a class="nav-link active text-center text-sm-end" aria-current="page" href="{{url('/')}}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active text-center text-sm-end" aria-current="page" href="#">Nosotros</a>
+                                <a class="nav-link active text-center text-sm-end" aria-current="page" href="{{url('/nosotros')}}">Nosotros</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link active text-center text-sm-end dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Catalogo Completo</a></li>
-                                    <li><a class="dropdown-item text-capitalize" href="#">Clases</a></li>
-                                    <li><a class="dropdown-item text-capitalize" href="#">Ropa</a></li>
-                                    <li><a class="dropdown-item text-capitalize" href="#">Equipos</a></li>
+                                    <li><a class="dropdown-item" href="{{url('/tienda')}}">Catalogo Completo</a></li>
+                                    <li><a class="dropdown-item text-capitalize" href="{{url('/tienda/clases')}}">Clases</a></li>
+                                    <li><a class="dropdown-item text-capitalize" href="{{url('/tienda/ropa')}}">Ropa</a></li>
+                                    <li><a class="dropdown-item text-capitalize" href="{{url('/tienda/equipos')}}">Equipos</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active text-center text-sm-end " aria-current="page" href="index.php?view=dojos">Contactos</a>
+                                <a class="nav-link active text-center text-sm-end " aria-current="page" href="{{url('/contactos')}}">Contactos</a>
                             </li>
                         </ul>
                     </div>
@@ -109,8 +109,8 @@
                 </div>
             </div>
         </footer>
-        <script src="js/bootstrap.bundle.js"></script>
-        <script type="module" src="js/main.js"></script>
+        <script src="{{url('js/bootstrap.bundle.js')}}"></script>
+        <script type="module" src="{{url('js/main.js')}}"></script>
     </body>
     <div class="modal fade contactoModal" id="modalContactoDojos" tabindex="-1" aria-labelledby="modalContactoDojosLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
