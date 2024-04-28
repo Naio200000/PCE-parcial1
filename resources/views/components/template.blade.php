@@ -12,7 +12,7 @@
         <header class="header">
             <nav class="navbar navbar-expand-md fixed-top container-fluid x-auto ">
                 <div class="nav container align-items-center">
-                    <a class="navbar-brand " href="index.php?view=home"><img src="./img/logo/komei_Juku.webp" alt="Logo de la escuela"></a>
+                    <a class="navbar-brand " href="{{url('/')}}"><img src="./img/logo/komei_Juku.webp" alt="Logo de la escuela"></a>
                     <h1 class="titulo text-uppercase text-center">Komei Juku</h1>
                     <button class="navbar-toggler ms-auto m-2" type="button" data-bs-toggle="collapse" data-bs-target="#ContenidoSoporteBarranNav" aria-controls="ContenidoSoporteBarranNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -119,7 +119,7 @@
                     <p class="modal-title fs-5" id="modalContactoDojosLabel">Mensaje Nuevo</p>
                 </div>
                 <div class="container-fluid ">
-                    <form action="index.php?view=rtaForm" method="POST">
+                    <form action="" method="POST">
                         <div class="row align-items-start">
                             <div class="col col-lg-6">
                                 <div class="my-4">
