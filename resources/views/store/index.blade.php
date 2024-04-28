@@ -30,7 +30,7 @@
                                     <span class="col preciocard">{{$p->price}}</span>
                                     <div class="col-7">
                                         <div class="row px-0">
-                                            <button class="btn btn-komei col text-uppercase me-2"><a class="text-uppercase" href="#">Ver mas</a></button>
+                                            <button class="btn btn-komei col text-uppercase me-2"><a class="text-uppercase" href="{{route('tienda.producto')}}">Ver mas</a></button>
                                         </div>
                                     </div>
                                 </div>
