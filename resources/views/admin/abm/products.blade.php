@@ -31,7 +31,7 @@
                             <div class=" col-12 col-sm-6">
                                 <!-- Nombre -->
                                 <div class="mb-3 col-12 form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="a" name="name" >
+                                    <input type="text" class="form-control" id="name" placeholder="a" name="name" value="{{old('name')}}" >
                                     <label for="name" class="col-form-label ms-2">Nombre de la producto<span class="obligatorio fs-4"> *</span></label>
                                     @error('name')
                                         <p class="text-danger">{{$message}}</p>
@@ -39,7 +39,7 @@
                                 </div>
                                 <!-- Descripcion -->
                                 <div class="mb-3 form-floating">
-                                    <textarea class="form-control" id="descript-text" placeholder="a" name="descript" rows="4" style="height:100%;" ></textarea>
+                                    <textarea class="form-control" id="descript-text" placeholder="a" name="descript" rows="4" style="height:100%;">{{old('descript')}}</textarea>
                                     <label for="descript-text" class="col-form-label ms-2">Descripción del Producto<span class="obligatorio fs-4"> *</span></label>
                                     @error('descript')
                                         <p class="text-danger">{{$message}}</p>
@@ -47,7 +47,7 @@
                                 </div>
                                 <!-- precio -->
                                 <div class="mb-3 col-12 form-floating">
-                                    <input type="number" class="form-control" id="price" placeholder="1" name="price" >
+                                    <input type="number" class="form-control" id="price" placeholder="1" name="price" value="{{old('price')}}">
                                     <label for="price" class="col-form-label ms-2">Precio del Produto<span class="obligatorio fs-4"> *</span></label>
                                     @error('price')
                                         <p class="text-danger">{{$message}}</p>
@@ -57,7 +57,7 @@
                             <div class=" col-12 col-sm-6">
                                 {{-- category --}}
                                 <div class="mb-3 col-12 form-floating">
-                                    <input type="text" class="form-control" id="category" placeholder="a" name="category" >
+                                    <input type="text" class="form-control" id="category" placeholder="a" name="category" value="{{old('category')}}">
                                     <label for="category" class="col-form-label ms-2">Nombre de la producto<span class="obligatorio fs-4"> *</span></label>
                                     @error('category')
                                         <p class="text-danger">{{$message}}</p>
@@ -65,7 +65,7 @@
                                 </div>
                                 {{-- imagenes --}}
                                 <div class="mb-3 col-12 form-floating">
-                                    <input type="text" class="form-control" id="image" placeholder="a" name="image" >
+                                    <input type="text" class="form-control" id="image" placeholder="a" name="image" value="{{old('image')}}">
                                     <label for="image" class="col-form-label ms-2">Cargue una Imagen<span class="obligatorio fs-4"> *</span></label>
                                     {{-- <input class="form-control" type="file" id="imagen" name="imagen"> --}}
                                     @error('image')
@@ -74,7 +74,7 @@
                                 </div>
                                 {{-- descripcion de imagen --}}
                                 <div class="mb-3 col-12 form-floating">
-                                    <input type="text" class="form-control" id="altImage" placeholder="a" name="altImage" >
+                                    <input type="text" class="form-control" id="altImage" placeholder="a" name="altImage" value="{{old('altImage')}}">
                                     <label for="altImage" class="col-form-label ms-2">Descripcion de la imagen<span class="obligatorio fs-4"> *</span></label>
                                     @error('altImage')
                                         <p class="text-danger">{{$message}}</p>
