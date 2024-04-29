@@ -19,7 +19,7 @@
                             <div class=" col-12 col-sm-6">
                                 <!-- Nombre -->
                                 <div class="mb-3 col-12 form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="a" name="name" value="" >
+                                    <input type="text" class="form-control" id="name" placeholder="a" name="name" >
                                     <label for="name" class="col-form-label ms-2">Nombre de la producto<span class="obligatorio fs-4"> *</span></label>
                                 </div>
                                 <!-- Descripcion -->
@@ -29,14 +29,14 @@
                                 </div>
                                 <!-- precio -->
                                 <div class="mb-3 col-12 form-floating">
-                                    <input type="number" class="form-control" id="precio" placeholder="a" name="precio" value="" >
+                                    <input type="number" class="form-control" id="precio" placeholder="a" name="precio" >
                                     <label for="precio" class="col-form-label ms-2">Precio del Produto<span class="obligatorio fs-4"> *</span></label>
                                 </div>
                             </div>
                             <div class=" col-12 col-sm-6">
                                 {{-- category --}}
                                 <div class="mb-3 col-12 form-floating">
-                                    <input type="text" class="form-control" id="category" placeholder="a" name="category" value="" >
+                                    <input type="text" class="form-control" id="category" placeholder="a" name="category" >
                                     <label for="category" class="col-form-label ms-2">Nombre de la producto<span class="obligatorio fs-4"> *</span></label>
                                 </div>
                                 {{-- imagenes --}}
@@ -46,7 +46,7 @@
                                 </div>
                                 {{-- descripcion de imagen --}}
                                 <div class="mb-3 col-12 form-floating">
-                                    <input type="text" class="form-control" id="altImage" placeholder="a" name="altImage" value="" >
+                                    <input type="text" class="form-control" id="altImage" placeholder="a" name="altImage" >
                                     <label for="altImage" class="col-form-label ms-2">Descripcion de la imagen<span class="obligatorio fs-4"> *</span></label>
                                 </div>
                             </div>
