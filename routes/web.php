@@ -14,4 +14,5 @@ Route::get('tienda/producto/{id}', [\App\Http\Controllers\TiendaController::clas
 Route::get('admin', [\App\Http\Controllers\AdminController::class,'home'])->name('dash');
 Route::get('admin/productos', [\App\Http\Controllers\AdminController::class,'products'])->name('products');
 Route::get('admin/abm/productos', [\App\Http\Controllers\AdminController::class,'abmProducts'])->name('abm.products');
+Route::post('admin/abm/productos', [\App\Http\Controllers\AdminController::class,'actionAbmProducts'])->name('actions.abm.products');
 
