@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Producto;
+
 class AdminController extends Controller {
 
     public function home() {
@@ -11,6 +13,10 @@ class AdminController extends Controller {
 
     public function products() {
 
-        return view('admin.products');
+        $products = Producto::all();
+
+        return view('admin.products', [
+            'products' => $products
+        ]);
     }
 }
