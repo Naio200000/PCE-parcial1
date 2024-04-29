@@ -30,8 +30,8 @@
                                 </div>
                                 <!-- precio -->
                                 <div class="mb-3 col-12 form-floating">
-                                    <input type="number" class="form-control" id="precio" placeholder="a" name="precio" >
-                                    <label for="precio" class="col-form-label ms-2">Precio del Produto<span class="obligatorio fs-4"> *</span></label>
+                                    <input type="number" class="form-control" id="price" placeholder="a" name="price" >
+                                    <label for="price" class="col-form-label ms-2">Precio del Produto<span class="obligatorio fs-4"> *</span></label>
                                 </div>
                             </div>
                             <div class=" col-12 col-sm-6">
@@ -41,9 +41,10 @@
                                     <label for="category" class="col-form-label ms-2">Nombre de la producto<span class="obligatorio fs-4"> *</span></label>
                                 </div>
                                 {{-- imagenes --}}
-                                <div class="mb-3">
-                                    <label for="imagen" class="col-form-label ms-2">Cargue una Imagen<span class="obligatorio fs-4"> *</span></label>
-                                    <input class="form-control" type="file" id="imagen" name="imagen">
+                                <div class="mb-3 col-12 form-floating">
+                                    <input type="text" class="form-control" id="image" placeholder="a" name="image" >
+                                    <label for="image" class="col-form-label ms-2">Cargue una Imagen<span class="obligatorio fs-4"> *</span></label>
+                                    {{-- <input class="form-control" type="file" id="imagen" name="imagen"> --}}
                                 </div>
                                 {{-- descripcion de imagen --}}
                                 <div class="mb-3 col-12 form-floating">
