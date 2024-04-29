@@ -33,7 +33,9 @@
             </div>
         </nav>
     </header>
-    <main >{{ $slot}}</main>
+    <main >
+        {{ $slot}}
+    </main>
     <footer class="container-fluid mb-lg-0 footer">
         <div class="container-md">
             <div class="row align-items-center">

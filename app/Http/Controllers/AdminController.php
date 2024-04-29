@@ -31,6 +31,6 @@ class AdminController extends Controller {
         $data = $r->except('_token');
         Producto::create($data);
 
-        return redirect()->route('products');
+        return redirect()->route('products')->with('feedback.message', 'Se agrego un producto exitosamente.');
     }
 }
