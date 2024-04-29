@@ -19,7 +19,7 @@ class AdminController extends Controller {
 
     public function products() {
 
-        $products = Producto::all();
+        $products = Producto::query()->orderby('id','desc')->get();
 
         return view('admin.products', [
             'products' => $products
