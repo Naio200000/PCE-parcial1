@@ -30,7 +30,7 @@
                                 </div>
                                 <!-- precio -->
                                 <div class="mb-3 col-12 form-floating">
-                                    <input type="number" class="form-control" id="price" placeholder="a" name="price" >
+                                    <input type="number" class="form-control" id="price" placeholder="1" name="price" >
                                     <label for="price" class="col-form-label ms-2">Precio del Produto<span class="obligatorio fs-4"> *</span></label>
                                 </div>
                             </div>

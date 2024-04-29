@@ -28,6 +28,16 @@ class AdminController extends Controller {
 
     public function actionAbmProducts(request $r) {
 
+        $r->validate([
+            'name'=>'required|min:2',
+            'descript'=>'required',
+            'category'=>'required',
+            'price'=>'required|numeric',
+            'image'=>'required',
+            'altImage'=>'required',
+
+        ]);
+
         $data = $r->except('_token');
         Producto::create($data);
 
