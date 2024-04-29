@@ -12,4 +12,5 @@ Route::get('tienda', [\App\Http\Controllers\TiendaController::class, 'index'])->
 Route::get('tienda/producto/{id}', [\App\Http\Controllers\TiendaController::class, 'viewProduct'])->name('tienda.producto');
 
 Route::get('admin', [\App\Http\Controllers\AdminController::class,'home'])->name('dash');
+Route::get('admin/producto', [\App\Http\Controllers\AdminController::class,'products'])->name('products');
 

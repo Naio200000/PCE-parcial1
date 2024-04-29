@@ -8,4 +8,9 @@ class AdminController extends Controller {
 
         return view('admin.home');
     }
+
+    public function products() {
+
+        return view('admin.products');
+    }
 }
