@@ -250,7 +250,8 @@ main {
 .contactoModal{
     color: var(--main-font-color);
 }
-.red{
+.red,
+.obligatorio{
     color: rgb(180, 16, 16);
 }
 @media (min-width: 576px) {

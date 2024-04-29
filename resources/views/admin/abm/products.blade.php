@@ -10,6 +10,7 @@
                 <div class="row g-4 my-2 container mx-auto">
                     <!-- form -->
                     <form action="" method="POST">
+                        @csrf
                         <div class="row align-items-start">
                             <!-- Titulo -->
                             <div class="mb-3">
@@ -41,7 +42,7 @@
                                 </div>
                                 {{-- imagenes --}}
                                 <div class="mb-3">
-                                    <label for="imagen" class="col-form-label ms-2">Cargue una Imagen</label>
+                                    <label for="imagen" class="col-form-label ms-2">Cargue una Imagen<span class="obligatorio fs-4"> *</span></label>
                                     <input class="form-control" type="file" id="imagen" name="imagen">
                                 </div>
                                 {{-- descripcion de imagen --}}
