@@ -30,12 +30,16 @@ class AdminController extends Controller {
 
         $r->validate([
             'name'=>'required|min:2',
-            'descript'=>'required',
             'category'=>'required',
             'price'=>'required|numeric',
             'image'=>'required',
             'altImage'=>'required',
-
+        ],[
+            'name.required' => 'Este campo debe tener un valor de almenos :min caracteres',
+            'category.required' => 'Este campo debe tener un valor',
+            'price.required' => 'Este campo debe tener un valor',
+            'image.required' => 'Este campo debe ser nombre.extencion del archivo',
+            'altImage.required' => 'Este campo debe tener un valor'
         ]);
 
         $data = $r->except('_token');
