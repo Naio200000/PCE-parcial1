@@ -11,6 +11,11 @@ class AdminController extends Controller {
         return view('admin.home');
     }
 
+    public function abmProducts() {
+
+        return view('admin.abm.products');
+    }
+
     public function products() {
 
         $products = Producto::all();
