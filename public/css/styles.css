@@ -130,6 +130,25 @@ main {
 .dojos-textos {
     text-align: center;
 }
+.abm {
+    background-color: #fff;
+    padding-top: 100px;
+    margin-top: 1rem;
+    color: var(--main-font-color);
+}
+.listado {
+    padding-top: 8px;
+    background-color: var(--main-bg-color);
+}
+.tabla{
+    background-color: #fff;
+}
+.grey{
+    background-color: rgb(233,236,239);
+}
+.tarjetas-producto {
+    min-height: 500px;
+}
 .social,
 .datos {
     list-style: none;

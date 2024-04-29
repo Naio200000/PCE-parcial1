@@ -2,8 +2,8 @@
     <x-slot:title>ABM - Productos :: </x-slot:title>
 
     <section class="abm container-fluid container-md pb-3" id="abm">
-        <h2 class="titulo-seccion w-75 w-lg-100 text-uppercase text-center my-2 mx-auto px-2">Categorias</h2>
-        <p class="fs-5 w-75 text-center mx-auto">Administrador de Categorias principales de la tienda</p>
+        <h2 class="titulo-seccion w-75 w-lg-100 text-uppercase text-center my-2 mx-auto px-2">Productos</h2>
+        <p class="fs-5 w-75 text-center mx-auto">Administrador de Productos de la tienda</p>
         <div class="listado pb-3">
             <article>
                 <div class="row g-4 my-2 container mx-auto">
