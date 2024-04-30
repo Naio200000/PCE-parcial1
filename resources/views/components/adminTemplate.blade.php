@@ -30,6 +30,9 @@
                             </ul>
                         </li>
                     </ul>
+                    <div class=" text-center text-sm-end">
+                        <a href="{{route('home')}}"><p class="btn btn-komei text-center text-sm-end  fw-bold">Tienda</p></a>
+                    </div>
                 </div>
             </div>
         </nav>
