@@ -26,6 +26,7 @@
                             <a class="nav-link dropdown-toggle" href="index.php?view=tienda" role="button" data-bs-toggle="dropdown" aria-expanded="false">Administrar</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="{{route('products')}}">Productos</a></li>
+                                <li><a class="dropdown-item" href="{{route('blog')}}">Blog</a></li>
                             </ul>
                         </li>
                     </ul>

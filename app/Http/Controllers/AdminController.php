@@ -48,8 +48,13 @@ class AdminController extends Controller {
         return redirect()->route('products')->with('feedback.message', 'Se agrego un producto exitosamente.');
     }
 
-    public function abmBlog() {
+        public function Blog() {
 
-        return view('admin.abm.blog');
-    }
+            return view('admin.blog');
+        }
+
+        public function abmBlog() {
+
+            return view('admin.abm.blog');
+        }
 }
