@@ -48,7 +48,7 @@ class ProductosSeeder extends Seeder
                 'updated_at' => now()
             ]
         ]);
-        DB::table('blog')->insert([
+        DB::table('blogs')->insert([
             [
                 'id' => 1,
                 'title' => 'Explorando la Profundidad del Iaido: Un Arte Marcial de Precisión y Serenidad',
@@ -70,7 +70,7 @@ class ProductosSeeder extends Seeder
             [
                 'id' => 3,
                 'title' => 'Explorando las Raíces del Iaido: Un Viaje Transformador a Japón',
-                'image' => 'komei-juku-hero-3.webp',
+                'image' => 'komei-juku-hero-2.webp',
                 'blog' => '¿Alguna vez has soñado con sumergirte en la cultura y la tradición japonesas mientras te sumerges en el arte ancestral del Iaido? ¡Entonces este viaje es para ti! Te invitamos a embarcarte en una experiencia única que te llevará a las profundidades del corazón de Japón para entrenar y perfeccionar tus habilidades en este noble arte marcial.
 
                 Imagina despertarte cada mañana en tierras impregnadas de historia, rodeado de paisajes pintorescos y una atmósfera cargada de espiritualidad. Desde antiguos templos hasta escuelas de artes marciales tradicionales, tendrás la oportunidad de aprender de maestros expertos que han dedicado sus vidas al estudio y la práctica del Iaido.

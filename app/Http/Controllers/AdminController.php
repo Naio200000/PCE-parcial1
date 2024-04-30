@@ -51,9 +51,10 @@ class AdminController extends Controller {
 
         public function Blog() {
 
-            $blogs = Blog::query()->all();
+            $blog = Blog::all();
+
             return view('admin.blog', [
-                'blogs' => $blogs
+                'blog' => $blog
             ]);
         }
 

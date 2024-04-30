@@ -1,6 +1,6 @@
 <?php
     /**
-     * @var /App/Models/Blog[] | Illuminate\Database\Eloquent\Collection  $Blog
+     * @var /App/Models/Blogs[] | Illuminate\Database\Eloquent\Collection  $Blogs
     */
 ?>
 
@@ -31,14 +31,12 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {{-- @foreach ($products as $p)
+                            @foreach ($blog as $b)
                                 <tr>
-                                    <th class="text-center" scope="row">{{$p->id}}</th>
-                                    <td class="text-capitalize text-center">{{$p->name}}</td>
-                                    <td>{{$p->descript}}</td>
-                                    <td class="text-center">{{$p->category}}</td>
-                                    <td class="text-center">{{$p->price}}</td>
-                                    <td><img class="w-100" src="{{'../img/productos/' . $p->image}}" alt="meg"></td>
+                                    <th class="text-center" scope="row">{{$b->id}}</th>
+                                    <td class="text-capitalize text-center">{{$b->title}}</td>
+                                    <td>{{$b->blog}}</td>
+                                    <td><img class="w-100" src="{{'../img/hero/' . $b->image}}" alt="meg"></td>
                                     <td>
                                         <ul>
                                             <li class="btn-editar btn m-1"><a class="fw-bold" href="#">Editar</a></li>
@@ -46,7 +44,7 @@
                                         </ul>
                                     </td>
                                 </tr>
-                            @endforeach --}}
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
