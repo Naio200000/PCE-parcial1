@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Producto;
+use App\Models\Blog;
 
 class AdminController extends Controller {
 
@@ -50,7 +51,10 @@ class AdminController extends Controller {
 
         public function Blog() {
 
-            return view('admin.blog');
+            $blogs = Blog::query()->all();
+            return view('admin.blog', [
+                'blogs' => $blogs
+            ]);
         }
 
         public function abmBlog() {
