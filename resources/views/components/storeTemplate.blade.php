@@ -55,6 +55,9 @@
                                 <a class="nav-link active text-center text-sm-end " aria-current="page" href="{{route('contactos')}}">Contactos</a>
                             </li>
                         </ul>
+                        <div class=" text-center text-sm-end">
+                            <a href="{{route('dash')}}"><p class="btn btn-komei text-center text-sm-end  fw-bold">admin</p></a>
+                        </div>
                     </div>
                 </div>
             </nav>
