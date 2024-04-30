@@ -1,3 +1,8 @@
+<?php
+    /**
+     * @var /App/Models/Producto[] | Illuminate\Database\Eloquent\Collection  $producto
+    */
+?>
 <x-adminTemplate>
     <x-slot:title>ABM - Productos :: </x-slot:title>
     <section class="abm container-fluid container-md pb-3" id="abm">

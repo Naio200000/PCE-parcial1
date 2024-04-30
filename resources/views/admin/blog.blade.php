@@ -1,3 +1,9 @@
+<?php
+    /**
+     * @var /App/Models/Blog[] | Illuminate\Database\Eloquent\Collection  $Blog
+    */
+?>
+
 <x-adminTemplate>
     <x-slot:title>ABM - Productos :: </x-slot:title>
     <section class="abm container-fluid container-md pb-3" id="abm">
