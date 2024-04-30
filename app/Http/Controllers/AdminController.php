@@ -12,11 +12,6 @@ class AdminController extends Controller {
         return view('admin.home');
     }
 
-    public function abmProducts() {
-
-        return view('admin.abm.products');
-    }
-
     public function products() {
 
         $products = Producto::query()->orderby('id','desc')->get();
@@ -24,6 +19,11 @@ class AdminController extends Controller {
         return view('admin.products', [
             'products' => $products
         ]);
+    }
+
+    public function abmProducts() {
+
+        return view('admin.abm.products');
     }
 
     public function actionAbmProducts(request $r) {
@@ -46,5 +46,10 @@ class AdminController extends Controller {
         Producto::create($data);
 
         return redirect()->route('products')->with('feedback.message', 'Se agrego un producto exitosamente.');
+    }
+
+    public function abmBlog() {
+
+        return view('admin.abm.blog');
     }
 }
