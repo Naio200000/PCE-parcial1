@@ -1,17 +1,27 @@
+<?php
+    /**
+     * @var /App/Models/Blogs[] | Illuminate\Database\Eloquent\Collection  $Blogs
+    */
+    // print_r($news);
+?>
+
 <x-storeTemplate>
     <x-slot:title>Home::</x-slot:title>
     <section class="hero">
         <div id="CarrpuselHero" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="./img/hero/komei-juku-hero-2.webp" class="d-block w-100" alt="Grupo de estdiantes de Iaido">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="./img/hero/komei-juku-hero-3.webp" class="d-block w-100" alt="Banner de promocion para clases">
-                </div>
-                <div class="carousel-item">
-                    <img src="./img/hero/komei-juku-hero-4.webp" class="d-block w-100" alt="Primer plano de persona a punto de desenvainar una katana">
-                </div>
+                <?php $c = 0;?>
+                @foreach ($news as $n)
+                    <div class="carousel-item <?= ($c == 0) ? 'active' : '' ?>" data-bs-interval="10000">
+                        <div class="heroBanner d-flex flex-column justify-content-between" style="background-image: url({{'./img/hero/' . $n->image}}); background-repeat: no-repeat; background-size: contain;aspect-ration: 16/9;">
+                            <h2 class="text-center pt-2 h2">{{$n->title}}</h2>
+                            <div class= "">
+                                <p class="h4 p-2">{{$n->blog}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <?php $c++; ?>
+                @endforeach
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#CarrpuselHero" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -86,6 +86,9 @@ main {
     color: rgb(180, 16, 16);
     font-family: 'Spectral', serif;
 }
+.heroBanner{
+    height: 680px;
+}
 .tienda {
     background-color: #fff;
     padding-top: 100px;

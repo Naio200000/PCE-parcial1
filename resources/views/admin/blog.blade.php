@@ -26,7 +26,7 @@
                                 <th class="px-1 text-center" scope="col">#</th>
                                 <th class="px-1 text-center" scope="col">Titulo</th>
                                 <th class="px-1 text-center" scope="col" width="50%">Blog</th>
-                                <th class="px-1 text-center" scope="col" width="15%">Imagenes</th>
+                                <th class="px-1 text-center" scope="col" width="15%">Portada</th>
                                 <th class="px-1 text-center" scope="col">Acciones</th>
                             </tr>
                         </thead>
