@@ -2,7 +2,6 @@
     /**
      * @var /App/Models/Blogs[] | Illuminate\Database\Eloquent\Collection  $Blogs
     */
-    // print_r($news);
 ?>
 
 <x-storeTemplate>
@@ -13,10 +12,10 @@
                 <?php $c = 0;?>
                 @foreach ($news as $n)
                     <div class="carousel-item <?= ($c == 0) ? 'active' : '' ?>" data-bs-interval="10000">
-                        <div class="heroBanner d-flex flex-column justify-content-between" style="background-image: url({{'./img/hero/' . $n->image}}); background-repeat: no-repeat; background-size: contain;aspect-ration: 16/9;">
+                        <div class="heroBanner d-flex flex-column justify-content-between pt-5" style="background-image: url({{'./img/hero/' . $n->image}});">
                             <h2 class="text-center pt-2 h2">{{$n->title}}</h2>
                             <div class= "">
-                                <p class="h4 p-2">{{$n->blog}}</p>
+                                <p class="h4 p-2 w-50">{{$n->blog}}</p>
                             </div>
                         </div>
                     </div>

@@ -88,6 +88,9 @@ main {
 }
 .heroBanner{
     height: 680px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    aspect-ratio: 16/9;
 }
 .tienda {
     background-color: #fff;
