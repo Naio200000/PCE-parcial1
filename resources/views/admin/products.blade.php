@@ -19,6 +19,7 @@
                             <a class="px-3 me-1" href="{{route('add.products')}}"><button class="fw-bold btn btn-agregar">Agregar Producto</button></a>
                         </div>
                     </div>
+                    @if ($products->isNotEmpty())
                     <table class="tabla table table-striped">
                         <thead>
                             <tr>
@@ -50,6 +51,9 @@
                             @endforeach
                         </tbody>
                     </table>
+                    @else
+                    <p class="fs-5 w-75 text-center mx-auto">No se encuentran productos cargados. Ingrese un producto nuevo</p>
+                    @endif
                 </div>
             </article>
         </div>
