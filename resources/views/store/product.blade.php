@@ -28,7 +28,7 @@
                         <p class="card-text fs-5">{{$producto->descript}}</p>
                     </div>
                     <div class="card-body flex-grow-0 mt-auto" id="botonProducto">
-                        <p class="fs-3 mb-3 fw-bold text-center preciocard">{{$producto->price}}</p>
+                        <p class="fs-3 mb-3 fw-bold text-center">Precio: <span class="preciocard">{{$product->price}}</span></p>
                         <form action="admin/acciones/item-acc.php" class="row">
                             <div class="col-6 d-flex align-items-center">
                                 <label class="px-1" for="cantidad">Cantidad: </label>

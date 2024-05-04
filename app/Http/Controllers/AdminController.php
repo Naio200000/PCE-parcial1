@@ -44,6 +44,21 @@ class AdminController extends Controller {
         return redirect()->route('products')->with('feedback.message', 'Se agrego un producto exitosamente.');
     }
 
+    public function delProducts(int $id) {
+
+        return view('admin.del.product',[
+            'product' => Producto::findorfail($id)
+        ]);
+    }
+
+    public function actionDelProducts(int $id) {
+
+        $product = Producto::findorfail($id);
+
+        $product->delete();
+        return redirect()->route('products')->with('feedback.message', 'Se elimino un producto exitosamente.');
+    }
+
         public function Blog() {
 
             $blog = Blog::all();
