@@ -3,13 +3,13 @@ resources/views/store/product.blade.php<?php
      * @var /App/Models/Producto[] | Illuminate\Database\Eloquent\Collection  $product
     */
 ?>
-<x-storeTemplate>
+<x-adminTemplate>
 
-    <x-slot:title>{{$product->name . ' :: '}}</x-slot>
+    <x-slot:title>{{'Confirmacion de Eliminacion :: ' . $product->name . ' :: '}}</x-slot>
+
 
     <section class="item container-fluid container-md pb-3">
-        <h2 class="titulo-seccion w-75 w-lg-100 text-uppercase text-center fw-bold my-2 mx-auto px-2"></h2>
-        <p class="fs-5 w-75 mx-auto fw-bold text-center"></p>
+        <h2 class="titulo-seccion w-75 w-lg-100 text-uppercase text-center fw-bold my-2 mx-auto px-2">Confirmacion de eliminacion de Producto</h2>
         <div class="card">
             <div class="row">
                 <div class="col-lg-6 d-flex flex-column">
@@ -30,13 +30,13 @@ resources/views/store/product.blade.php<?php
                     <div class="card-body flex-grow-0 mt-auto" id="botonProducto">
                         <p class="fs-3 mb-3 fw-bold text-center">Precio: <span class="preciocard">{{$product->price}}</span></p>
                         <form action="{{route('action.del.products', ['id' => $product->id])}}" method="POST" class="row">
-                            <div class="col-6">
+                            <div class="">
                                 @csrf
-                                <button type="submit" class="btn btn-borrar fw-bold w-100 fs-3 text-uppercase">Borrar</button>
+                                <button type="submit" class="btn btn-borrar  fw-bold w-100 fs-3 text-uppercase">Borrar</button>
                             </div>
                         </form>
                 </div>
             </div>
         </div>
     </section>
-</x-storeTemplate>
+</x-adminTemplate>
