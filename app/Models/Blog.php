@@ -20,7 +20,7 @@ class Blog extends Model
 
     public function formatNews() :string {
 
-        return implode('<br> ', array_slice(explode('.', $this->blog) , 0));
+        return implode('<br>', array_slice(explode('.', $this->blog) , 0));
 
     }
 
