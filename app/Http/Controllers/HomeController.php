@@ -11,10 +11,20 @@ class HomeController extends Controller {
         $news =  Blog::query()->orderby('id','desc')->take(3)->get();
 
         foreach ($news as $n) {
-            $n->blog = $n->formatearBlog();
+            $n->blog = $n->fronNews();
         }
 
         return view('welcome', [
+            'news' => $news
+        ]);
+    }
+
+    public function viewNews(int $id) {
+
+        $news = Blog::findOrFail($id);
+
+        $news->blog = $news->formatNews();
+        return view('news', [
             'news' => $news
         ]);
     }
