@@ -188,6 +188,13 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'name' => 'nombre',
+        'descript' => 'descripción',
+        'category' => 'categoria',
+        'price' => 'precio',
+        'altImage' => 'descripción de imagen',
+        'title' => 'titulo',
+    ],
 
 ];
