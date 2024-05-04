@@ -17,7 +17,7 @@
             <article>
                 <div class="row g-4 my-2 container mx-auto">
                     <!-- form -->
-                    <form action="" method="POST">
+                    <form action="{{ route('actions.add.products') }}" method="POST">
                         @csrf
                         <div class="row align-items-start">
                             <!-- Titulo -->

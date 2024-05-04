@@ -22,25 +22,20 @@ class AdminController extends Controller {
         ]);
     }
 
-    public function abmProducts() {
+    public function addProducts() {
 
-        return view('admin.abm.products');
+        return view('admin.add.products');
     }
 
-    public function actionAbmProducts(request $r) {
+    public function actionAddProducts(request $r) {
 
         $r->validate([
             'name'=>'required|min:2',
             'category'=>'required',
+            'descript'=>'required',
             'price'=>'required|numeric',
             'image'=>'required',
             'altImage'=>'required',
-        ],[
-            'name.required' => 'Este campo debe tener un valor de almenos :min caracteres',
-            'category.required' => 'Este campo debe tener un valor',
-            'price.required' => 'Este campo debe tener un valor',
-            'image.required' => 'Este campo debe ser nombre.extencion del archivo',
-            'altImage.required' => 'Este campo debe tener un valor'
         ]);
 
         $data = $r->except('_token');

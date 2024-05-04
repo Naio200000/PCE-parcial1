@@ -16,8 +16,9 @@ Route::get('admin', [\App\Http\Controllers\AdminController::class,'home'])->name
 Route::get('admin/productos', [\App\Http\Controllers\AdminController::class,'products'])->name('products');
 Route::get('admin/blog', [\App\Http\Controllers\AdminController::class,'Blog'])->name('blog');
 
-Route::get('admin/abm/productos', [\App\Http\Controllers\AdminController::class,'abmProducts'])->name('abm.products');
-Route::post('admin/abm/productos', [\App\Http\Controllers\AdminController::class,'actionAbmProducts'])->name('actions.abm.products');
+Route::get('admin/agregar/productos', [\App\Http\Controllers\AdminController::class,'addProducts'])->name('add.products');
+Route::post('admin/agregar/productos', [\App\Http\Controllers\AdminController::class,'actionAddProducts'])->name('actions.add.products');
+Route::post('admin/productos/{id}/eliminar', [\App\Http\Controllers\AdminController::class,'actionDelProducts'])->name('action.del.products');
 
 Route::get('admin/abm/blog', [\App\Http\Controllers\AdminController::class,'abmBlog'])->name('abm.blog');
 
