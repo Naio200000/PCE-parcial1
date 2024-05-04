@@ -12,10 +12,17 @@ class Blog extends Model
      * Devuelve un el blog recortado a 50 palabras.
      * @return string descripcion formateada
      */
-    public function formatearBlog() :string {
+    public function fronNews() :string {
 
         return implode(' ', array_slice(explode(' ', $this->blog) , 0,50)) . '...';
 
     }
+
+    public function formatNews() :string {
+
+        return implode('<br> ', array_slice(explode('.', $this->blog) , 0));
+
+    }
+
 }
 
