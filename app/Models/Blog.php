@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property string $title
@@ -40,9 +40,13 @@ class Blog extends Model
 
     }
 
+    /**
+     * divide el parrafo que se encuentra en la bd
+     * @return string descripcion con los espacios entre parrafors
+     */
     public function formatNews() :string {
 
-        return implode('<br>', array_slice(explode('.', $this->blog) , 0));
+        return implode('<br><br>', array_slice(explode('.', $this->blog) , 0));
 
     }
 
