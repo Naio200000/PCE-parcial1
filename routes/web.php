@@ -14,10 +14,11 @@ Route::get('tienda/producto/{id}', [\App\Http\Controllers\TiendaController::clas
 
 Route::get('admin', [\App\Http\Controllers\AdminController::class,'home'])->name('dash');
 Route::get('admin/productos', [\App\Http\Controllers\AdminController::class,'products'])->name('products');
-Route::get('admin/blog', [\App\Http\Controllers\AdminController::class,'Blog'])->name('blog');
+Route::get('admin/blog', [\App\Http\Controllers\AdminController::class,'blog'])->name('blog');
 
 Route::get('admin/agregar/productos', [\App\Http\Controllers\AdminController::class,'addProducts'])->name('add.products');
 Route::get('admin/borrar/productos/{id}', [\App\Http\Controllers\AdminController::class,'delProducts'])->name('del.products')->whereNumber('id');
+Route::get('admin/editar/productos/{id}', [\App\Http\Controllers\AdminController::class,'editProducts'])->name('edit.products')->whereNumber('id');
 Route::post('admin/agregar/productos', [\App\Http\Controllers\AdminController::class,'actionAddProducts'])->name('actions.add.products');
 Route::post('admin/productos/{id}/eliminar', [\App\Http\Controllers\AdminController::class,'actionDelProducts'])->name('action.del.products')->whereNumber('id');
 
