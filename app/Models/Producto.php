@@ -2,11 +2,13 @@
 
 namespace App\Models;
 
+
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property string $name
@@ -36,5 +38,16 @@ class Producto extends Model
     use HasFactory;
 
     protected $fillable = ['name', 'descript', 'image', 'altImage','category','price'];
+
+    /**
+     * formatea el precio para que se muestre de manera correcta
+     */
+    protected function price() : Attribute {
+
+        return Attribute::make(
+            get: fn ($price) => $price /100,
+            set: fn ($price) => $price * 100,
+        );
+    }
 
 }

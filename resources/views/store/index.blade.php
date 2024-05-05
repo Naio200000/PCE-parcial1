@@ -27,7 +27,7 @@
                                 <h4 class="card-title fs-2 titulocard" type="button" id=""><a href="#" class="fs-2 titulocard">{{$p->name}}</a></h4>
                                 <p class="card-text">{{$p->descript}}</p>
                                 <div class="row px2">
-                                    <span class="col preciocard">{{$p->price}}</span>
+                                    <p class="col fw-bold h4">$ <span class="preciocard">{{$p->price}}</span></p>
                                     <div class="col-7">
                                         <div class="row px-0">
                                             <button class="btn btn-komei col text-uppercase me-2"><a class="text-uppercase" href="{{route('tienda.producto', ['id' => $p->id])}}">Ver mas</a></button>
