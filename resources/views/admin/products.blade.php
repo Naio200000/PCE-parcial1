@@ -43,7 +43,7 @@
                                     <td><img class="w-100" src="{{'../img/productos/' . $p->image}}" alt="{{$p->altImage}}"></td>
                                     <td>
                                         <ul>
-                                            <li class="btn-editar btn m-1"><a class="fw-bold" href="#">Editar</a></li>
+                                            <li class="btn-editar btn m-1"><a class="fw-bold" href="{{route('edit.products', ['id' => $p->id])}}">Editar</a></li>
                                             <li class="btn-borrar btn m-1"><a class="fw-bold" href="{{route('del.products', ['id' => $p->id])}}">Borrar</a></li>
                                         </ul>
                                     </td>
