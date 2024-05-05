@@ -59,7 +59,13 @@ class AdminController extends Controller {
         return redirect()->route('products')->with('feedback.message', 'Se elimino un producto exitosamente.');
     }
 
-        public function Blog() {
+    public function editProducts(int $id) {
+
+        return view('admin.edit.products',[
+            'product' => Producto::findorfail($id)
+        ]);
+    }
+        public function blog() {
 
             $blog = Blog::all();
 
@@ -70,6 +76,6 @@ class AdminController extends Controller {
 
         public function abmBlog() {
 
-            return view('admin.abm.blog');
+            return view('admin.add.blog');
         }
 }
