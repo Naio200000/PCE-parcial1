@@ -8,7 +8,7 @@
 
 <x-adminTemplate>
 
-    <x-slot:title>ABM - Productos ::</x-slot:title>
+    <x-slot:title>Alta de Productos ::</x-slot:title>
 
     <section class="abm container-fluid container-md pb-3" id="abm">
         <h2 class="titulo-seccion w-75 w-lg-100 text-uppercase text-center my-2 mx-auto px-2">Alta, Baja y Modificacion de productos</h2>
