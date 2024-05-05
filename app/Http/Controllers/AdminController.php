@@ -65,17 +65,37 @@ class AdminController extends Controller {
             'product' => Producto::findorfail($id)
         ]);
     }
-        public function blog() {
 
-            $blog = Blog::all();
+    public function actionEditProducts(int $id, Request $r) {
 
-            return view('admin.blog', [
-                'blog' => $blog
-            ]);
-        }
+        $r->validate([
+            'name'=>'required|min:2',
+            'category'=>'required',
+            'descript'=>'required',
+            'price'=>'required|numeric',
+            'image'=>'required',
+            'altImage'=>'required',
+        ]);
 
-        public function abmBlog() {
+        $data = $r->except('_token');
 
-            return view('admin.add.blog');
-        }
+        $product = Producto::findorfail($id);
+
+        $product->update($data);
+        return redirect()->route('products')->with('feedback.message', 'Se edito un producto exitosamente.');
+    }
+
+    public function blog() {
+
+        $blog = Blog::all();
+
+        return view('admin.blog', [
+            'blog' => $blog
+        ]);
+    }
+
+    public function abmBlog() {
+
+        return view('admin.add.blog');
+    }
 }
