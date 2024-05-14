@@ -9,7 +9,6 @@ Route::get('contactos', [\App\Http\Controllers\HomeController::class,'contacts']
 Route::get('noticias/{id}', [\App\Http\Controllers\HomeController::class,'viewNews'])->name('news')->whereNumber('id');
 
 Route::get('tienda', [\App\Http\Controllers\TiendaController::class, 'index'])->name('tienda.index');
-
 Route::get('tienda/producto/{id}', [\App\Http\Controllers\TiendaController::class, 'viewProduct'])->name('tienda.producto')->whereNumber('id');
 
 Route::get('admin', [\App\Http\Controllers\AdminController::class,'home'])->name('dash');
