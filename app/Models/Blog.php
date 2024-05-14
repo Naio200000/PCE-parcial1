@@ -30,6 +30,9 @@ use Illuminate\Database\Eloquent\Model;
 class Blog extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['title', 'blog', 'image', 'altImage'];
+
     /**
      * Devuelve un el blog recortado a 50 palabras.
      * @return string descripcion formateada

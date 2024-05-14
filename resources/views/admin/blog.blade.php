@@ -17,7 +17,7 @@
                 <div class="row g-4 my-2 container mx-auto">
                     <div class="tabla col-12 p-2 d-flex flex-column">
                         <div class="ms-auto">
-                            <a class="px-3 me-1" href="{{route('abm.products')}}"><button class="fw-bold btn btn-agregar">Agregar Blog</button></a>
+                            <a class="px-3 me-1" href="{{route('add.blog')}}"><button class="fw-bold btn btn-agregar">Agregar Blog</button></a>
                         </div>
                     </div>
                     <table class="tabla table table-striped">
