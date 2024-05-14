@@ -132,11 +132,11 @@ class AdminController extends Controller {
     public function editBlog(int $id) {
 
         return view('admin.edit.blog',[
-            'product' => Blog::findorfail($id)
+            'blog' => Blog::findorfail($id)
         ]);
     }
 
-    public function actionEditblog(int $id, Request $r) {
+    public function actionEditBlog(int $id, Request $r) {
 
         $r->validate([
             'title'=>'required|min:2',

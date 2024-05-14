@@ -24,6 +24,8 @@ Route::post('admin/productos/{id}/editar', [\App\Http\Controllers\AdminControlle
 
 Route::get('admin/abm/blog', [\App\Http\Controllers\AdminController::class,'abmBlog'])->name('abm.blog');
 Route::get('admin/agregar/blog', [\App\Http\Controllers\AdminController::class,'addBlog'])->name('add.blog');
+Route::get('admin/borrar/blog/{id}', [\App\Http\Controllers\AdminController::class,'delBlog'])->name('del.blog')->whereNumber('id');
 Route::get('admin/editar/blog/{id}', [\App\Http\Controllers\AdminController::class,'editBlog'])->name('edit.blog')->whereNumber('id');
 Route::post('admin/agregar/blog', [\App\Http\Controllers\AdminController::class,'actionAddBlog'])->name('actions.add.blog');
+Route::post('admin/blog/{id}/editar', [\App\Http\Controllers\AdminController::class,'actionEditBlog'])->name('actions.edit.blog')->whereNumber('id');
 
