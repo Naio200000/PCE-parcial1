@@ -40,7 +40,7 @@
                                     <td>
                                         <ul>
                                             <li class="btn-editar btn m-1"><a class="fw-bold" href="{{route('edit.blog', ['id' => $b->id])}}">Editar</a></li>
-                                            <li class="btn-borrar btn m-1"><a class="fw-bold" href="{{route('del.products', ['id' => $b->id])}}">Borrar</a></li>
+                                            <li class="btn-borrar btn m-1"><a class="fw-bold" href="{{route('del.blog', ['id' => $b->id])}}">Borrar</a></li>
                                         </ul>
                                     </td>
                                 </tr>

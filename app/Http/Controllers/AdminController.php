@@ -116,9 +116,13 @@ class AdminController extends Controller {
 
     public function delBlog(int $id) {
 
+        $news = Blog::findOrFail($id);
+
+        $news->blog = $news->formatNews();
         return view('admin.del.blog',[
-            'product' => Blog::findorfail($id)
+            'news' => $news
         ]);
+
     }
 
     public function actionDelBlog(int $id) {
