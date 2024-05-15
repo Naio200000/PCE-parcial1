@@ -56,7 +56,8 @@
                             </li>
                         </ul>
                         <div class=" text-center text-sm-end">
-                            <a href="{{route('dash')}}"><p class="btn btn-komei text-center text-sm-end  fw-bold">admin</p></a>
+                            <a href="{{route('login')}}"><p class="btn btn-komei text-center text-sm-end  fw-bold">Login</p></a>
+                            {{-- <a href="{{route('dash')}}"><p class="btn btn-komei text-center text-sm-end  fw-bold">admin</p></a> --}}
                         </div>
                     </div>
                 </div>
