@@ -10,9 +10,9 @@ Route::get('contactos', [\App\Http\Controllers\HomeController::class,'contacts']
 Route::get('noticias/{id}', [\App\Http\Controllers\HomeController::class,'viewNews'])->name('news')->whereNumber('id');
 
 // Login
-Route::get('login', [\App\Http\Controllers\HomeController::class, 'login'])->name('login');
-Route::post('login', [\App\Http\Controllers\HomeController::class, 'loginProcess'])->name('actions.login');
-Route::post('login', [\App\Http\Controllers\HomeController::class, 'logout'])->name('actions.logout');
+Route::get('login', [\App\Http\Controllers\LoginController::class, 'login'])->name('login');
+Route::post('login', [\App\Http\Controllers\LoginController::class, 'actionLogin'])->name('actions.login');
+Route::post('logout', [\App\Http\Controllers\LoginController::class, 'logout'])->name('actions.logout');
 
 
 // Tienda
