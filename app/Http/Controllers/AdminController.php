@@ -8,11 +8,19 @@ use App\Models\Blog;
 
 class AdminController extends Controller {
 
+    /**
+     * Funcion para el routeo de la vista del dashboard de admin
+     * @return la vista admin.home
+     */
     public function home() {
 
         return view('admin.home');
     }
 
+    /**
+     * Funcion para el routeo de la vista de los productos de admin
+     * @return la vista admin.products
+     */
     public function products() {
 
         $products = Producto::query()->orderby('id','desc')->get();
@@ -22,11 +30,20 @@ class AdminController extends Controller {
         ]);
     }
 
+    /**
+     * Funcion para el routeo de la vista de add products de admin
+     * @return la vista admin.add.products
+     */
     public function addProducts() {
 
         return view('admin.add.products');
     }
 
+    /**
+     * Funcion para el routeo de la accion de agrear productos a la bd. validando los datos ingresados
+     * @param Request $r
+     * @return product si la validacion es correcta agrega los datos a la BD y devuelve al usuario a la vista de productos de admin
+     */
     public function actionAddProducts(request $r) {
 
         $r->validate([
@@ -44,6 +61,11 @@ class AdminController extends Controller {
         return redirect()->route('products')->with('feedback.message', 'Se agrego un producto exitosamente.');
     }
 
+
+    /**
+     * Funcion para el routeo de la vista de borrar los productos de admin
+     * @return la vista admin.del.products
+     */
     public function delProducts(int $id) {
 
         return view('admin.del.product',[
@@ -51,6 +73,11 @@ class AdminController extends Controller {
         ]);
     }
 
+    /**
+     * Funcion para el routeo de la accion de borrar los productos
+     * @param int $id Id del producto a eliminar
+     * @return product Si encuentra el producto lo borra de la base de datos y devuelve la vista product
+     */
     public function actionDelProducts(int $id) {
 
         $product = Producto::findorfail($id);
@@ -59,6 +86,12 @@ class AdminController extends Controller {
         return redirect()->route('products')->with('feedback.message', 'Se elimino un producto exitosamente.');
     }
 
+
+    /**
+     * Funcion para el routeo de la vista de editar los productos de admin
+     * @param int $id Id del producto a editar
+     * @return la si encuentra el producto, devuelve la vista admin.edit.product con los datos del producto.
+     */
     public function editProducts(int $id) {
 
         return view('admin.edit.products',[
@@ -66,6 +99,11 @@ class AdminController extends Controller {
         ]);
     }
 
+    /**
+     * Funcion para el routeo de la accion de editar el producto, despues de validarlos
+     * @param int $id ID del producto a editar.
+     * @return products Si valida los datos correcta mente, actualiza los datos cambiados en la BD y devuelve la vista products
+     */
     public function actionEditProducts(int $id, Request $r) {
 
         $r->validate([
@@ -85,6 +123,10 @@ class AdminController extends Controller {
         return redirect()->route('products')->with('feedback.message', 'Se edito un producto exitosamente.');
     }
 
+    /**
+     * Funcion para el routeo de la vista de blogs de admin
+     * @return blogs devuelve la vista blogs
+     */
     public function blog() {
 
         $blog = Blog::query()->orderby('id','desc')->get();
@@ -94,12 +136,21 @@ class AdminController extends Controller {
         ]);
     }
 
+    /**
+     * Funcion para el routeo de la vista de gregar los blogs de admin
+     * @return admin.add.blog devuelve la vista admin.add.blog
+     */
     public function addBlog() {
 
         return view('admin.add.blog');
     }
 
-    public function actionAddBlog(request $r) {
+    /**
+     * Funcion para el routeo de la accion para agregar blogs de admin despues de validarlos
+     * @param Request $r los datos para validar y agregar a la BD
+     * @return blog Si valida los datos correctamente los agrega a la BD y devuelve la vista blog
+     */
+    public function actionAddBlog(Request $r) {
 
         $r->validate([
             'title'=>'required|min:2',
@@ -114,6 +165,11 @@ class AdminController extends Controller {
         return redirect()->route('blog')->with('feedback.message', 'Se agrego un producto exitosamente.');
     }
 
+    /**
+     * Funcion para el routeo de la vista de borrar los blogs de admin
+     * @param int $id Id del blog para borrar
+     * @return blog si encuentra el blog, lo muestra
+     */
     public function delBlog(int $id) {
 
         $news = Blog::findOrFail($id);
@@ -125,6 +181,11 @@ class AdminController extends Controller {
 
     }
 
+    /**
+     * Funcion para el routeo de la accion de borrar blog
+     * @param int $id Id del blog a borrar
+     * @return blog si encuentra el blog lo borra y devuelve la vista blogs
+     */
     public function actionDelBlog(int $id) {
 
         $product = Blog::findorfail($id);
@@ -133,6 +194,11 @@ class AdminController extends Controller {
         return redirect()->route('blog')->with('feedback.message', 'Se elimino un producto exitosamente.');
     }
 
+    /**
+     * Funcion para el routeo de la vista de editar los blogs de admin
+     * @param int $id Id del blogs a editar
+     * @return admin.edit.blog si encuentra el blog, devuelve la vista admin.edit.blog con los datos del producto a editar
+     */
     public function editBlog(int $id) {
 
         return view('admin.edit.blog',[
@@ -140,6 +206,11 @@ class AdminController extends Controller {
         ]);
     }
 
+    /**
+     * Funcion para el routeo de la accion para editar blogs. despues de validarlos
+     * @param int $id Id del blog a editar
+     * @return blog Despues de validar los datos, actualiza los datos cambiados en la BD y devuelve la vista blogs
+     */
     public function actionEditBlog(int $id, Request $r) {
 
         $r->validate([
