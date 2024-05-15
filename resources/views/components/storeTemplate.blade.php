@@ -63,11 +63,12 @@
                         <div class=" text-center text-sm-end">
                             @if (!auth()->check())
                                 <a href="{{route('login')}}"><p class="btn btn-komei text-center text-sm-end  fw-bold">Login</p></a>
+                            @else
+                                <form action="{{route('actions.logout')}}" method="POST">
+                                    @csrf
+                                    <button class="btn btn-komei text-center text-sm-end  fw-bold" >Cerrar Sesion ({{Auth()->user()->name}})</button>
+                                </form>
                             @endif
-                            <form action="{{route('actions.logout')}}" method="POST">
-                                @csrf
-                                <button class="btn btn-komei text-center text-sm-end  fw-bold" >Cerrar Sesion ({{Auth()->user()->name}})</button>
-                            </form>
                         </div>
                     </div>
                 </div>

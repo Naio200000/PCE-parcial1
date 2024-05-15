@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Spatie\FlareClient\Http\Exceptions\InvalidData;
 
 class LoginController extends Controller
 {
@@ -22,5 +23,16 @@ class LoginController extends Controller
             ->with('feedback.type', 'danger');
         }
         return redirect()->route('tienda.index')->with('feedback.message', 'Ha iniciado sesion exitosamente.');
+    }
+
+    public function logout (Request $r) {
+
+        auth()->logout();
+
+        $r->session()->invalidate();
+        $r->session()->regenerateToken();
+
+        return redirect()->route('login');
+
     }
 }
