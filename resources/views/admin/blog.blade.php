@@ -10,7 +10,7 @@
         <h2 class="titulo-seccion w-75 w-lg-100 text-uppercase text-center my-2 mx-auto px-2">Noticias</h2>
         <p class="fs-5 w-75 text-center mx-auto">Administrador de Noticias de la tienda</p>
         @if (session()->has('feedback.message'))
-            <div class="alert alert-success">{{session()->get('feedback.message')}}</div>
+            <div class="alert alert-{{session()->get('feedback.type', 'success')}}">{{session()->get('feedback.message')}}</div>
         @endif
         <div class="listado pb-3">
             <article>

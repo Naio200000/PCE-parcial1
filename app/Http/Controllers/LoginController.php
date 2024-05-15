@@ -13,7 +13,14 @@ class LoginController extends Controller
 
     public function actionLogin (Request $r) {
 
-        
+        $c = $r->only(['email','password']);
 
+        if (!auth()->attempt($c)) {
+            return redirect()->back(fallback:route('login'))
+            ->withInput()
+            ->with('feedback.message','Los datos ingresados no pertenecen a un usuario Autorizado')
+            ->with('feedback.type', 'danger');
+        }
+        return redirect()->route('tienda.index')->with('feedback.message', 'Ha iniciado sesion exitosamente.');
     }
 }
