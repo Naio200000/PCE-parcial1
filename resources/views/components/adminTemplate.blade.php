@@ -29,9 +29,19 @@
                                 <li><a class="dropdown-item" href="{{route('blog')}}">Blog</a></li>
                             </ul>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{route('home')}}"><p class="nav-link active text-center text-sm-end ">Tienda</p></a>
+                        </li>
                     </ul>
                     <div class=" text-center text-sm-end">
-                        <a href="{{route('home')}}"><p class="btn btn-komei text-center text-sm-end  fw-bold">Tienda</p></a>
+                        @if (!auth()->check())
+                            <a href="{{route('login')}}"><p class="btn btn-komei text-center text-sm-end  fw-bold">Login</p></a>
+                        @else
+                            <form action="{{route('actions.logout')}}" method="POST">
+                                @csrf
+                                <button class="btn btn-komei text-center text-sm-end  fw-bold" >Cerrar Sesion ({{Auth()->user()->name}})</button>
+                            </form>
+                        @endif
                     </div>
                 </div>
             </div>
