@@ -54,10 +54,20 @@
                             <li class="nav-item">
                                 <a class="nav-link active text-center text-sm-end " aria-current="page" href="{{route('contactos')}}">Contactos</a>
                             </li>
+                            @if (auth()->check())
+                            <li class="nav-item">
+                                    <a href="{{route('dash')}}"><p class="nav-link active text-center text-sm-end ">admin</p></a>
+                                </li>
+                            @endif
                         </ul>
                         <div class=" text-center text-sm-end">
-                            <a href="{{route('login')}}"><p class="btn btn-komei text-center text-sm-end  fw-bold">Login</p></a>
-                            {{-- <a href="{{route('dash')}}"><p class="btn btn-komei text-center text-sm-end  fw-bold">admin</p></a> --}}
+                            @if (!auth()->check())
+                                <a href="{{route('login')}}"><p class="btn btn-komei text-center text-sm-end  fw-bold">Login</p></a>
+                            @endif
+                            <form action="{{route('actions.logout')}}" method="POST">
+                                @csrf
+                                <button class="btn btn-komei text-center text-sm-end  fw-bold" >Cerrar Sesion ({{Auth()->user()->name}})</button>
+                            </form>
                         </div>
                     </div>
                 </div>
