@@ -37,7 +37,7 @@
                                 <tr>
                                     <th class="text-center" scope="row">{{$b->id}}</th>
                                     <td class="text-capitalize text-center">{{$b->title}}</td>
-                                    <td class="text-capitalize text-center">{{$b->user_id}}</td>
+                                    <td class="text-capitalize text-center">{{$b->user->name}}</td>
                                     <td>{{$b->blog}}</td>
                                     <td><img class="w-100" src="{{'../img/hero/' . $b->image}}" alt="meg"></td>
                                     <td>

@@ -53,5 +53,13 @@ class Blog extends Model
 
     }
 
+    /**
+     * funcion que relaciona al blog con un usuario en particular
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
 }
 
