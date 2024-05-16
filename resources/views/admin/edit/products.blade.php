@@ -38,6 +38,7 @@
                                         <p class="text-danger">{{$message}}</p>
                                     @enderror
                                 </div>
+                                {{-- Hay un problema que si dejo una de las opciones vacias esto sin embargo escribe en la base de datos. No se me ocurrio otra solucion mas que separar lo 2 campos en la BD. Pero no se como hacerlo desde aca --}}
                                 <!-- Descripcion Corta -->
                                 <div class="mb-3 form-floating">
                                     <input class="form-control" id="descript-corta" placeholder="a" name="descript[]" value="{{old('descript.1',$product->descript[0])}}">
@@ -54,6 +55,7 @@
                                         <p class="text-danger">{{$message}}</p>
                                     @enderror
                                 </div>
+
                             </div>
                             <div class=" col-12 col-sm-6">
                                 <!-- precio -->
