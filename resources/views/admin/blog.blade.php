@@ -20,6 +20,7 @@
                             <a class="px-3 me-1" href="{{route('add.blog')}}"><button class="fw-bold btn btn-agregar">Agregar Blog</button></a>
                         </div>
                     </div>
+                    @if ($blog->isNotEmpty())
                     <table class="tabla table table-striped">
                         <thead>
                             <tr>
@@ -47,6 +48,9 @@
                             @endforeach
                         </tbody>
                     </table>
+                    @else
+                    <p class="fs-5 w-75 text-center mx-auto">No se encuentran Blogs cargados. Ingrese uno nuevo</p>
+                    @endif
                 </div>
             </article>
         </div>
