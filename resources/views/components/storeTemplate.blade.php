@@ -52,7 +52,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active text-center text-sm-end " aria-current="page" href="{{route('contactos')}}">Contactos</a>
+                                {{-- <a class="nav-link active text-center text-sm-end " aria-current="page" href="{{route('contactos')}}">Contactos</a> --}}
                             </li>
                             @if (auth()->check())
                             <li class="nav-item">
