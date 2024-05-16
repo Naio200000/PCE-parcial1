@@ -3,6 +3,7 @@
 /**
  * @var Illuminate\Support\ViewErrorBad $errors
 */
+$userId = auth()->user()->id;
 ?>
 
 
@@ -24,6 +25,7 @@
                             @if($errors->any())
                                 <div class="alert alert-danger text-center">Hubo un error en la carga del formulario</div>
                             @endif
+                            <input type="hidden" name="user_id" value="{{$userId}}">
                             <div class="mb-3">
                                 <h3 class='text-center fw-bold text-capitalize '>Noticias</h3>
                                 <p class="text-center">Los campos marcados con <span class="obligatorio fs-4"> *</span> son obligatorios</p>

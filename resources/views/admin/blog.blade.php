@@ -26,6 +26,7 @@
                             <tr>
                                 <th class="px-1 text-center" scope="col">#</th>
                                 <th class="px-1 text-center" scope="col">Titulo</th>
+                                <th class="px-1 text-center" scope="col">Autor</th>
                                 <th class="px-1 text-center" scope="col" width="50%">Blog</th>
                                 <th class="px-1 text-center" scope="col" width="15%">Portada</th>
                                 <th class="px-1 text-center" scope="col">Acciones</th>
@@ -36,6 +37,7 @@
                                 <tr>
                                     <th class="text-center" scope="row">{{$b->id}}</th>
                                     <td class="text-capitalize text-center">{{$b->title}}</td>
+                                    <td class="text-capitalize text-center">{{$b->user_id}}</td>
                                     <td>{{$b->blog}}</td>
                                     <td><img class="w-100" src="{{'../img/hero/' . $b->image}}" alt="meg"></td>
                                     <td>
