@@ -37,7 +37,7 @@
                                 <tr>
                                     <th class="text-center" scope="row">{{$p->id}}</th>
                                     <td class="text-capitalize text-center">{{$p->name}}</td>
-                                    <td>{{$p->descript}}</td>
+                                    <td>{{ implode(' ; ',$p->descript)}}</td>
                                     <td class="text-center">{{$p->category}}</td>
                                     <td class="text-center">{{$p->price}}</td>
                                     <td><img class="w-100" src="{{'../img/productos/' . $p->image}}" alt="{{$p->altImage}}"></td>

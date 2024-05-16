@@ -37,14 +37,24 @@
                                         <p class="text-danger">{{$message}}</p>
                                     @enderror
                                 </div>
-                                <!-- Descripcion -->
+                                <!-- Descripcion Corta -->
                                 <div class="mb-3 form-floating">
-                                    <textarea class="form-control" id="descript-text" placeholder="a" name="descript" rows="4" style="height:100%;">{{old('descript')}}</textarea>
-                                    <label for="descript-text" class="col-form-label ms-2">Descripción del Producto<span class="obligatorio fs-4"> *</span></label>
+                                    <input type="text" class="form-control" id="descript-corta" placeholder="a" name="descript[]" value="{{old('descript.0')}}">
+                                    <label for="descript-corta" class="col-form-label ms-2">Descripción Corta del Producto<span class="obligatorio fs-4"> *</span></label>
                                     @error('descript')
                                         <p class="text-danger">{{$message}}</p>
                                     @enderror
                                 </div>
+                                <!-- Descripcion Larga -->
+                                <div class="mb-3 form-floating">
+                                    <textarea class="form-control" id="descript-larga" placeholder="a" name="descript[]" rows="5" style="height:100%;">{{old('descript.1')}}</textarea>
+                                    <label for="descript-larga" class="col-form-label ms-2">Descripción Larga del Producto<span class="obligatorio fs-4"> *</span></label>
+                                    @error('descript')
+                                        <p class="text-danger">{{$message}}</p>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class=" col-12 col-sm-6">
                                 <!-- precio -->
                                 <div class="mb-3 col-12 form-floating">
                                     <input type="number" class="form-control" id="price" placeholder="1" name="price" value="{{old('price')}}">
@@ -53,8 +63,6 @@
                                         <p class="text-danger">{{$message}}</p>
                                     @enderror
                                 </div>
-                            </div>
-                            <div class=" col-12 col-sm-6">
                                 {{-- category --}}
                                 <div class="mb-3 col-12 form-floating">
                                     <input type="text" class="form-control" id="category" placeholder="a" name="category" value="{{old('category')}}">
