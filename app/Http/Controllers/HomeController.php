@@ -8,7 +8,7 @@ class HomeController extends Controller {
 
     public function home() {
 
-        $news =  Blog::query()->orderby('id','desc')->take(3)->get();
+        $news =  Blog::query()->with('user')->orderby('id','desc')->take(3)->get();
 
         foreach ($news as $n) {
             $n->blog = $n->fronNews();
