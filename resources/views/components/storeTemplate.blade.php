@@ -46,9 +46,9 @@
                                 <a class="nav-link active text-center text-sm-end dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="{{route('tienda.index')}}">Catalogo Completo</a></li>
-                                    <li><a class="dropdown-item text-capitalize" href="{{url('/tienda/clases')}}">Clases</a></li>
+                                    {{-- <li><a class="dropdown-item text-capitalize" href="{{url('/tienda/clases')}}">Clases</a></li>
                                     <li><a class="dropdown-item text-capitalize" href="{{url('/tienda/ropa')}}">Ropa</a></li>
-                                    <li><a class="dropdown-item text-capitalize" href="{{url('/tienda/equipos')}}">Equipos</a></li>
+                                    <li><a class="dropdown-item text-capitalize" href="{{url('/tienda/equipos')}}">Equipos</a></li> --}}
                                 </ul>
                             </li>
                             <li class="nav-item">
