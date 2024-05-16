@@ -50,6 +50,9 @@ class Producto extends Model
         );
     }
 
+    /**
+     * Une ambos campos de la descripcion en uno solo. y los divide cuando los llama
+     */
     protected function descript () : Attribute {
 
         return Attribute::make(
