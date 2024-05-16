@@ -25,10 +25,10 @@
                 <div class="col-lg-6 d-flex flex-column p-3">
                     <div class="card-body flex-grow-0">
                         <h3 class="card-title fs-2">{{$producto->name}}</h3>
-                        <p class="card-text fs-5">{{$producto->descript}}</p>
+                        <p class="card-text fs-5">{{$producto->descript[1]}}</p>
                     </div>
                     <div class="card-body flex-grow-0 mt-auto" id="botonProducto">
-                        <p class="fs-3 mb-3 fw-bold text-center">Precio: <span class="preciocard">{{$product->price}}</span></p>
+                        <p class="fs-3 mb-3 fw-bold text-center">Precio: <span class="preciocard">{{$producto->price}}</span></p>
                         <form action="admin/acciones/item-acc.php" class="row">
                             <div class="col-6 d-flex align-items-center">
                                 <label class="px-1" for="cantidad">Cantidad: </label>

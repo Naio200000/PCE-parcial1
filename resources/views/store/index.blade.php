@@ -25,7 +25,7 @@
                             <span class="mx-2 ms-auto capital">{{$p->category}}</span>
                             <div class="card-body">
                                 <h4 class="card-title fs-2 titulocard" type="button" id=""><a href="#" class="fs-2 titulocard">{{$p->name}}</a></h4>
-                                <p class="card-text">{{$p->descript}}</p>
+                                <p class="card-text">{{$p->descript[0]}}</p>
                                 <div class="row px2">
                                     <p class="col fw-bold h4">$ <span class="preciocard">{{$p->price}}</span></p>
                                     <div class="col-7">

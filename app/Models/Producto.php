@@ -45,9 +45,16 @@ class Producto extends Model
     protected function price() : Attribute {
 
         return Attribute::make(
-            get: fn ($price) => $price /100,
+            get: fn ($price) => $price / 100,
             set: fn ($price) => $price * 100,
         );
     }
 
+    protected function descript () : Attribute {
+
+        return Attribute::make(
+            get: fn ($descript) => explode(';', $descript),
+            set: fn ($descript) => implode(';', $descript),
+        );
+    }
 }
