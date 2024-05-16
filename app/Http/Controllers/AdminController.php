@@ -129,7 +129,7 @@ class AdminController extends Controller {
      */
     public function blog() {
 
-        $blog = Blog::query()->orderby('id','desc')->get();
+        $blog = Blog::query()->with('user')->orderby('id','desc')->get();
 
         return view('admin.blog', [
             'blog' => $blog

@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 // Pagionas
 Route::get('/', [\App\Http\Controllers\HomeController::class,'home'])->name('home');
 Route::get('nosotros', [\App\Http\Controllers\HomeController::class,'about'])->name('nosotros');
-// Route::get('contactos', [\App\Http\Controllers\HomeController::class,'contacts'])->name('contactos');
+Route::get('contactos', [\App\Http\Controllers\HomeController::class,'contacts'])->name('contactos');
 Route::get('noticias/{id}', [\App\Http\Controllers\HomeController::class,'viewNews'])->name('news')->whereNumber('id');
 
 // Login
