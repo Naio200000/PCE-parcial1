@@ -31,7 +31,7 @@ class Blog extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'blog', 'image', 'altImage'];
+    protected $fillable = ['title', 'blog', 'image', 'altImage','user_id'];
 
     /**
      * Devuelve un el blog recortado a 50 palabras.
