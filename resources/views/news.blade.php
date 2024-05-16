@@ -15,6 +15,7 @@
             <img class="d-block w-100"  src="{{'../img/hero/' . $news->image}}" alt="{{$news->altImage}}">
         </div>
         <p class="mt-3 pe-md-3 fs-5 w-75 mx-auto">{!! $news->blog !!}</p>
+        <p class="mt-3 pe-md-3 fs-5 w-75 ms-auto fw-bold">Publicado por {{ $news->user->name }}</p>
     </section>
 
 </x-storeTemplate>
