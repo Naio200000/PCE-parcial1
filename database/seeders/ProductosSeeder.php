@@ -20,7 +20,7 @@ class ProductosSeeder extends Seeder
                 'descript' => 'Disfruta de una clase por semana en los días que prefieras. ; Te invitamos a participar una clase semanal para el uso de la katana japonesa (esgrima samurai). En la misma podrás ver los fundamentos básicos de uso de la katana japonés. Todo el material lo provee el dojo, solo necesitas ropa cómoda.',
                 'image' => '1700660324.webp',
                 'altImage' => 'Baner de clases de Iaido',
-                'category' => 'clase',
+                'category_id' => 3,
                 'price' => '700000',
                 'created_at' => now(),
                 'updated_at' => now()
@@ -31,7 +31,7 @@ class ProductosSeeder extends Seeder
                 'descript' => 'Keikogi para entrenamiento, 100% Tetron. ; Elaborado en tetron: 65% poliéster +35% rayon, esta chaqueta está especialmente diseñada para la práctica de iaido. No achica, no pierde color y es fácil de mantener.',
                 'image' => '1700594250.webp',
                 'altImage' => 'Chaqueta azul de entrenamiento',
-                'category' => 'ropa',
+                'category_id' => 1,
                 'price' => '500000',
                 'created_at' => now(),
                 'updated_at' => now()
@@ -42,7 +42,7 @@ class ProductosSeeder extends Seeder
                 'descript' => 'Katana de madera para entrenamiento, con saya de plastico; Una katanas hechas de madera es bokuto (literalmente espada de madera). tallada en diversas maderas para mejorar su relación con el peso',
                 'image' => 'bokuto-01.webp',
                 'altImage' => 'Bokkuto con Saya',
-                'category' => 'equipos',
+                'category_id' => 2,
                 'price' => '2000000',
                 'created_at' => now(),
                 'updated_at' => now()
