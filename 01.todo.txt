@@ -33,11 +33,6 @@ palabras y cuándo no).
 - Hay errores de validación de HTML.
 
 
-
-- Código inconsistente: Inconsistencia en la
-ubicación de las llaves de apertura de métodos. A
-veces las ponés en la misma línea, a veces en la
-siguiente.
 - [blog-form] El id del usuario no lo deberías pasar
 como un campo hidden. Es innecesario, y además
 eso un usuario lo puede cambiar. Deberías

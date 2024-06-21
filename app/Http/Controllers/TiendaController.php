@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Producto;
 use Illuminate\Http\Request;
 
-class TiendaController extends Controller{
+class TiendaController extends Controller {
 
     /**
      * funcion que devuelve la vista de las de tienda con todos los productos de la base de datos

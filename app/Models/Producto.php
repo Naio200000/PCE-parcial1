@@ -33,8 +33,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Producto whereUpdatedAt($value)
  * @mixin \Eloquent
  */
-class Producto extends Model
-{
+class Producto extends Model {
+    
     use HasFactory;
 
     protected $fillable = ['name', 'descript', 'image', 'altImage','category','price'];

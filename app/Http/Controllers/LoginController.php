@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Spatie\FlareClient\Http\Exceptions\InvalidData;
 
-class LoginController extends Controller
-{
+class LoginController extends Controller {
     /**
      * Funcion de routeo de la vista Login
      * @return login vista login

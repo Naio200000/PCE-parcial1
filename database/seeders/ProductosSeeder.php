@@ -48,8 +48,5 @@ class ProductosSeeder extends Seeder
                 'updated_at' => now()
             ]
         ]);
-
     }
-
-
 }

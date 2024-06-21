@@ -27,8 +27,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Blog whereUpdatedAt($value)
  * @mixin \Eloquent
  */
-class Blog extends Model
-{
+class Blog extends Model {
     use HasFactory;
 
     protected $fillable = ['title', 'blog', 'image', 'altImage','user_id'];
@@ -40,7 +39,6 @@ class Blog extends Model
     public function fronNews() :string {
 
         return implode(' ', array_slice(explode(' ', $this->blog) , 0,50)) . '...';
-
     }
 
     /**
@@ -50,14 +48,13 @@ class Blog extends Model
     public function formatNews() :string {
 
         return implode('<br><br>', array_slice(explode('.', $this->blog) , 0));
-
     }
 
     /**
      * funcion que relaciona al blog con un usuario en particular
      */
-    public function user()
-    {
+    public function user() {
+
         return $this->belongsTo(User::class);
     }
 
