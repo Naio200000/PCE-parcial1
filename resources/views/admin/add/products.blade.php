@@ -2,6 +2,7 @@
 
 /**
  * @var Illuminate\Support\ViewErrorBad $errors
+ * @var  Illuminate\Database\Eloquent\Collection|\App\Models\Category[] $categories
 */
 ?>
 
@@ -66,10 +67,15 @@
                                 </div>
                                 {{-- category --}}
                                 <div class="mb-3 col-12 form-floating">
-                                    <input type="text" class="form-control" id="category" placeholder="a" name="category" value="{{old('category')}}">
-                                    <label for="category" class="col-form-label ms-2">Nombre de la categoria<span class="obligatorio fs-4"> *</span></label>
+                                    <label for="category" class="label-control ms-2 d-none">Categoria<span class="obligatorio fs-4"> *</span></label>
+                                    <select name="category" id="category"class="form-select" aria-label="Default select example">
+                                        <option value="">Seleccione una Categoria<span class="obligatorio fs-4"> *</span></option>
+                                        @foreach ($category as $c)
+                                        <option value="{{$c->id}}">{{$c->name}}</option>
+                                        @endforeach
+                                    </select>
                                     @error('category')
-                                        <p class="text-danger">{{$message}}</p>
+                                    <p class="text-danger">{{$message}}</p>
                                     @enderror
                                 </div>
                                 {{-- imagenes --}}

@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Producto;
 use App\Models\Blog;
+use App\Models\Category;
 
 class AdminController extends Controller {
 
@@ -36,7 +37,10 @@ class AdminController extends Controller {
      */
     public function addProducts() {
 
-        return view('admin.add.products');
+        return view('admin.add.products', [
+
+            'category' => Category::all(),
+        ]);
     }
 
     /**
