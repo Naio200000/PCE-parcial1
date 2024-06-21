@@ -15,22 +15,18 @@ class CategorySeeder extends Seeder
     {
         Category::create([
 
-            'id' => 1,
             'name' => 'ropa'
         ]);
         Category::create([
 
-            'id' => 2,
             'name' => 'equipos'
         ]);
         Category::create([
 
-            'id' => 3,
             'name' => 'clases'
         ]);
         Category::create([
 
-            'id' => 4,
             'name' => 'seminario'
         ]);
     }

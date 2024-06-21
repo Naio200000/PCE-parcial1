@@ -65,7 +65,7 @@ class Producto extends Model {
     /**
      * funcion que relaciona al producto con una categoria en particular
      */
-    public function category_id () :BelongsTo {
+    public function category_id () {
 
         return $this->belongsTo(Category::class);
     }
