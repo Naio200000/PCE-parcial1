@@ -25,25 +25,13 @@ escritas como "espandinr" en vez de "expandir",
 inconsistencias cuándo poner mayúsculas a
 palabras y cuándo no).
 - Hay errores de validación sin traducir.
-- [noticias-form] Los campos dicen "Nombre de la
-producto", "Descripción del Producto".
-- [noticias] Los mensajes de feedback también
-hablan de productos.
-- [productos] Una columna tiene nombre en inglés
-("Category").
-* [noticias/productos-alta] No funcionaron
-inicalmente. Refrescaban la pantalla del form,
-dejando los campos vacíos, y no pasaba nada.
-Recién modificando las vistas y volviéndolas a
-guardar pasaron a funcionar. Pareciera que había
-algún tema de caché.
+
 * Muy original la temática.
 + Dos ABMs.
 
 
 - Hay errores de validación de HTML.
-- Todos los alts de las imágenes en [contacto]
-dicen "Un señor muy buen moso".
+
 
 
 - Código inconsistente: Inconsistencia en la

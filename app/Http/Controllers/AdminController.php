@@ -162,7 +162,7 @@ class AdminController extends Controller {
         $data = $r->except('_token');
         Blog::create($data);
 
-        return redirect()->route('blog')->with('feedback.message', 'Se agrego un producto exitosamente.');
+        return redirect()->route('blog')->with('feedback.message', 'Se publicó la noticia correctamente');
     }
 
     /**
@@ -191,7 +191,7 @@ class AdminController extends Controller {
         $product = Blog::findorfail($id);
 
         $product->delete();
-        return redirect()->route('blog')->with('feedback.message', 'Se elimino un producto exitosamente.');
+        return redirect()->route('blog')->with('feedback.message', 'Se elimino una noticia exitosamente.');
     }
 
     /**
@@ -225,6 +225,6 @@ class AdminController extends Controller {
         $product = Blog::findorfail($id);
 
         $product->update($data);
-        return redirect()->route('blog')->with('feedback.message', 'Se edito un producto exitosamente.');
+        return redirect()->route('blog')->with('feedback.message', 'Se edito una noticia exitosamente.');
     }
 }
