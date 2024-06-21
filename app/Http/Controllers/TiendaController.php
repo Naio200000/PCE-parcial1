@@ -13,7 +13,7 @@ class TiendaController extends Controller {
      */
     public function index () {
 
-        $productos = Producto::all();
+        $productos = Producto::with('category')->get();
 
 
         return view('store.index', [
