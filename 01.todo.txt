@@ -26,8 +26,6 @@ inconsistencias cuándo poner mayúsculas a
 palabras y cuándo no).
 - Hay errores de validación sin traducir.
 
-* Muy original la temática.
-+ Dos ABMs.
 
 
 - Hay errores de validación de HTML.
