@@ -29,6 +29,15 @@ class HomeController extends Controller {
         ]);
     }
 
+    public function newsList() {
+
+        $newsList = Blog::query()->orderby('id','desc')->get();
+
+        return view('newsList', [
+            'newsList' => $newsList,
+        ]);
+    }
+
     public function about() {
 
         return view('about');
