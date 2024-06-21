@@ -52,7 +52,7 @@ class AdminController extends Controller {
 
         $r->validate([
             'name'=>'required|min:2',
-            'category'=>'required',
+            'category_id'=>'required',
             'descript'=>'required',
             'price'=>'required|numeric',
             'image'=>'required',
@@ -99,7 +99,8 @@ class AdminController extends Controller {
     public function editProducts(int $id) {
 
         return view('admin.edit.products',[
-            'product' => Producto::findorfail($id)
+            'product' => Producto::findorfail($id),
+            'category' => Category::all(),
         ]);
     }
 
@@ -112,7 +113,7 @@ class AdminController extends Controller {
 
         $r->validate([
             'name'=>'required|min:2',
-            'category'=>'required',
+            'category_id'=>'required',
             'descript'=>'required',
             'price'=>'required|numeric',
             'image'=>'required',

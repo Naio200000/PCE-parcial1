@@ -3,6 +3,7 @@
 /**
  * @var Illuminate\Support\ViewErrorBad $errors
  * @var /App/Models/Producto[] | Illuminate\Database\Eloquent\Collection  $product
+ * @var  Illuminate\Database\Eloquent\Collection|\App\Models\Category[] $categories
 */
 ?>
 
@@ -67,9 +68,17 @@
                                     @enderror
                                 </div>
                                 {{-- category --}}
-                                <div class="mb-3 col-12 form-floating">
-                                    <input type="text" class="form-control" id="category" placeholder="a" name="category" value="{{old('category',$product->category)}}">
-                                    <label for="category" class="col-form-label ms-2">Nombre de la categoria<span class="obligatorio fs-4"> *</span></label>
+                                <div class="mb-3 col-12">
+                                    <label for="category_id" class="label-control ms-2 d-none">Categoria<span class="obligatorio fs-4"> *</span></label>
+                                    <select name="category_id" id="category_id"class="form-select form-select-lg" aria-label="Large select example">
+                                        <option value="">Seleccione una Categoria<span class="obligatorio fs-4"> *</span></option>
+                                        @foreach ($category as $c)
+                                        <option
+                                            value="{{$c->id}}"
+                                            @selected($c->id == old('category_id'))
+                                            >{{$c->name}}</option>
+                                        @endforeach
+                                    </select>
                                     @error('category')
                                         <p class="text-danger">{{$message}}</p>
                                     @enderror

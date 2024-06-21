@@ -66,12 +66,15 @@
                                     @enderror
                                 </div>
                                 {{-- category --}}
-                                <div class="mb-3 col-12 form-floating">
-                                    <label for="category" class="label-control ms-2 d-none">Categoria<span class="obligatorio fs-4"> *</span></label>
-                                    <select name="category" id="category"class="form-select" aria-label="Default select example">
+                                <div class="mb-3 col-12">
+                                    <label for="category_id" class="label-control ms-2 d-none">Categoria<span class="obligatorio fs-4"> *</span></label>
+                                    <select name="category_id" id="category_id"class="form-select form-select-lg" aria-label="Large select example">
                                         <option value="">Seleccione una Categoria<span class="obligatorio fs-4"> *</span></option>
                                         @foreach ($category as $c)
-                                        <option value="{{$c->id}}">{{$c->name}}</option>
+                                        <option
+                                            value="{{$c->id}}"
+                                            @selected($c->id == old('category_id'))
+                                            >{{$c->name}}</option>
                                         @endforeach
                                     </select>
                                     @error('category')
