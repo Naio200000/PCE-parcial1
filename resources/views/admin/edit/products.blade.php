@@ -75,7 +75,7 @@
                                         @foreach ($category as $c)
                                         <option
                                             value="{{$c->id}}"
-                                            @selected($c->id == old('category_id'))
+                                            @selected($c->id == old('category_id', $product->category_id))
                                             >{{$c->name}}</option>
                                         @endforeach
                                     </select>
