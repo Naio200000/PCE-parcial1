@@ -26,7 +26,7 @@
                                 <th class="px-1 text-center" scope="col">#</th>
                                 <th class="px-1 text-center" scope="col">Nombre</th>
                                 <th class="px-1 text-center" scope="col" width="40%">Descripción</th>
-                                <th class="px-1 text-center" scope="col" >Category</th>
+                                <th class="px-1 text-center" scope="col" >Categoria</th>
                                 <th class="px-1 text-center" scope="col">Precio</th>
                                 <th class="px-1 text-center" scope="col" width="15%">Imagenes</th>
                                 <th class="px-1 text-center" scope="col">Acciones</th>

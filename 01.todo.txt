@@ -1,0 +1,58 @@
+- El slider de la home es demasiado grande (en
+1920x1080, por ejemplo, es más de la mitad del
+alto de la pantalla), mucho espacio "above the fold"
+para algo que aporta tan poco valor al usuario. Se
+estudia mucho si realmente tienen usos válidos los
+
+sliders (
+https://cxl.com/blog/dont-use-automatic-image-sliders-or-carousels/
+https://yoast.com/opinion-on-sliders/
+https://usabilitygeek.com/sliders-web-design-use/
+https://www.orbitmedia.com/blog/rotating-sliders-hurt-website/
+https://shouldiuseacarousel.com/
+) con la mayoría
+de los estudios sugiriendo que no sirven de nada,
+tanto por usabilidad, como por accesibilidad, como
+por tiempos de carga. En el caso de incluirlo, nunca
+tiene que ser en detrimento del principal contenido
+del documento que el usuario quiere realmente ver.
+¿Cuántas veces entraste en un sitio nuevo diciendo
+"A ver qué tiene el slider"? No es una buena forma
+tampoco de presentar noticias a los usuarios para
+leer.
+- Errores de ortografía (ej: tildes, palabras mal
+escritas como "espandinr" en vez de "expandir",
+inconsistencias cuándo poner mayúsculas a
+palabras y cuándo no).
+- Hay errores de validación sin traducir.
+- [noticias-form] Los campos dicen "Nombre de la
+producto", "Descripción del Producto".
+- [noticias] Los mensajes de feedback también
+hablan de productos.
+- [productos] Una columna tiene nombre en inglés
+("Category").
+* [noticias/productos-alta] No funcionaron
+inicalmente. Refrescaban la pantalla del form,
+dejando los campos vacíos, y no pasaba nada.
+Recién modificando las vistas y volviéndolas a
+guardar pasaron a funcionar. Pareciera que había
+algún tema de caché.
+* Muy original la temática.
++ Dos ABMs.
+
+
+- Hay errores de validación de HTML.
+- Todos los alts de las imágenes en [contacto]
+dicen "Un señor muy buen moso".
+
+
+- Código inconsistente: Inconsistencia en la
+ubicación de las llaves de apertura de métodos. A
+veces las ponés en la misma línea, a veces en la
+siguiente.
+- [blog-form] El id del usuario no lo deberías pasar
+como un campo hidden. Es innecesario, y además
+eso un usuario lo puede cambiar. Deberías
+pedírselo directamente a la autenticación al
+momento de grabar.
+

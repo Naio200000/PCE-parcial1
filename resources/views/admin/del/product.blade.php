@@ -9,7 +9,7 @@ resources/views/store/product.blade.php<?php
 
 
     <section class="item container-fluid container-md pb-3">
-        <h2 class="titulo-seccion w-75 w-lg-100 text-uppercase text-center fw-bold my-2 mx-auto px-2">Confirmacion de eliminacion de Producto</h2>
+        <h2 class="titulo-seccion w-75 w-lg-100 text-uppercase text-center fw-bold my-2 mx-auto px-2">Confirmación de eliminación de Producto</h2>
         <div class="card">
             <div class="row">
                 <div class="col-lg-6 d-flex flex-column">

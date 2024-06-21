@@ -33,7 +33,7 @@
                                 <!-- Nombre -->
                                 <div class="mb-3 col-12 form-floating">
                                     <input type="text"class="form-control" id="title" placeholder="a" name="title" value="{{old('title', $blog->title)}}" >
-                                    <label for="title" class="col-form-label ms-2">Nombre de la producto<span class="obligatorio fs-4"> *</span></label>
+                                    <label for="title" class="col-form-label ms-2">Título de la noticia<span class="obligatorio fs-4"> *</span></label>
                                     @error('title')
                                         <p class="text-danger">{{$message}}</p>
                                     @enderror
@@ -41,7 +41,7 @@
                                 <!-- Blog -->
                                 <div class="mb-3 form-floating">
                                     <textarea class="form-control" id="blog-text" placeholder="a" name="blog" rows="4" style="height:100%;">{{old('blog',$blog->blog)}}</textarea>
-                                    <label for="blog-text" class="col-form-label ms-2">Descripción del Producto<span class="obligatorio fs-4"> *</span></label>
+                                    <label for="blog-text" class="col-form-label ms-2">Texto de la Noticia<span class="obligatorio fs-4"> *</span></label>
                                     @error('blog')
                                         <p class="text-danger">{{$message}}</p>
                                     @enderror

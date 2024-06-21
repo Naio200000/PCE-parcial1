@@ -32,7 +32,7 @@
                                 <!-- Nombre -->
                                 <div class="mb-3 col-12 form-floating">
                                     <input type="text" class="form-control" id="name" placeholder="a" name="name" value="{{old('name')}}" >
-                                    <label for="name" class="col-form-label ms-2">Nombre de la producto<span class="obligatorio fs-4"> *</span></label>
+                                    <label for="name" class="col-form-label ms-2">Nombre del producto<span class="obligatorio fs-4"> *</span></label>
                                     @error('name')
                                         <p class="text-danger">{{$message}}</p>
                                     @enderror
