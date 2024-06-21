@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  *
@@ -34,10 +35,10 @@ use Illuminate\Database\Eloquent\Model;
  * @mixin \Eloquent
  */
 class Producto extends Model {
-    
+
     use HasFactory;
 
-    protected $fillable = ['name', 'descript', 'image', 'altImage','category','price'];
+    protected $fillable = ['name', 'descript', 'image', 'altImage','category_id','price'];
 
     /**
      * formatea el precio para que se muestre de manera correcta
@@ -59,5 +60,13 @@ class Producto extends Model {
             get: fn ($descript) => explode(';', $descript),
             set: fn ($descript) => implode(';', $descript),
         );
+    }
+
+    /**
+     * funcion que relaciona al producto con una categoria en particular
+     */
+    public function category_id () :BelongsTo {
+
+        return $this->belongsTo(Category::class);
     }
 }
