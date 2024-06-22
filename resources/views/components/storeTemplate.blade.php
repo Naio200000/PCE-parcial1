@@ -142,7 +142,7 @@
                                 <div class="my-4">
                                     <p class="text-center">Envíanos un mensaje con cualquier consulta que tengas.</p>
                                     <p class="text-center">También contanos tus experiencias en las artes marciales.</p>
-                                    <img class="d-none d-lg-block img-fluid mx-auto mt-3 rounded-3" src="./img/misc/imagen-contactos.webp" alt="Persona escribiendo en Japones">
+                                    <img class="d-none d-lg-block img-fluid mx-auto mt-3 rounded-3" src="storage/img/misc/imagen-contactos.webp" alt="Persona escribiendo en Japones">
                                 </div>
                             </div>
                             <div class="col col-lg-6 modal-body">
