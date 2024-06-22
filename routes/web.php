@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Middleware\CheckAdmin;
 use Illuminate\Support\Facades\Route;
 
 // Pagionas
@@ -23,7 +24,7 @@ Route::get('tienda', [\App\Http\Controllers\TiendaController::class, 'index'])->
 Route::get('tienda/producto/{id}', [\App\Http\Controllers\TiendaController::class, 'viewProduct'])->name('tienda.producto')->whereNumber('id');
 
 // Admin
-Route::get('admin', [\App\Http\Controllers\AdminController::class,'home'])->name('dash')->middleware('auth');
+Route::get('admin', [\App\Http\Controllers\AdminController::class,'home'])->name('dash')->middleware('auth')->middleware(App\Http\Middleware\CheckAdmin::class);
 Route::get('admin/productos', [\App\Http\Controllers\AdminController::class,'products'])->name('products')->middleware('auth');
 Route::get('admin/blog', [\App\Http\Controllers\AdminController::class,'blog'])->name('blog')->middleware('auth');
 
