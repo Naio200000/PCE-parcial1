@@ -15,7 +15,6 @@ class TiendaController extends Controller {
 
         $productos = Producto::with('category')->get();
 
-
         return view('store.index', [
             'productos' => $productos
         ]);
