@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Producto;
 use App\Models\Blog;
 use App\Models\Category;
+use Intervention\Image\Laravel\Facades\Image;
 
 class AdminController extends Controller {
 
@@ -62,6 +63,8 @@ class AdminController extends Controller {
         if ($r->hasFile('image')) {
 
             $data['image'] = $r->file('image')->store('img/productos');
+
+            Image::read(\Storage::path($data['image']))->coverDown(500, 500)->save();
         }
         Producto::create($data);
 
