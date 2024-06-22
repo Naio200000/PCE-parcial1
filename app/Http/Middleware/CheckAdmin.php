@@ -15,7 +15,13 @@ class CheckAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        echo 'middleware meg';
+        $user = auth()->user();
+
+        if (!$user->admin) {
+
+            return to_route('home');
+        }
+
         return $next($request);
     }
 }

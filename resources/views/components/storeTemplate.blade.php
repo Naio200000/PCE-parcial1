@@ -57,9 +57,11 @@
                                 <a class="nav-link active text-center text-sm-end " aria-current="page" href="{{route('newsList')}}">Noticias</a>
                             </li>
                             @if (auth()->check())
-                            <li class="nav-item">
-                                    <a href="{{route('dash')}}"><p class="nav-link active text-center text-sm-end ">admin</p></a>
-                                </li>
+                                @if (auth()->user()->admin)
+                                    <li class="nav-item">
+                                        <a href="{{route('dash')}}"><p class="nav-link active text-center text-sm-end ">admin</p></a>
+                                    </li>
+                                @endif
                             @endif
                         </ul>
                         <div class=" text-center text-sm-end">
