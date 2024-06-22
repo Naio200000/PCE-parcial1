@@ -127,12 +127,20 @@ class AdminController extends Controller {
 
         $data = $r->except('_token');
 
+
         if ($r->hasFile('image')) {
 
             $data['image'] = $r->file('image')->store('img/productos');
         }
 
         $product = Producto::findorfail($id);
+
+        $oldImage = $product->image;
+
+        if ($r->hasFile('image' && $oldImage !=+ null && \Storage::exists($oldImage))) {
+
+            \Storage::delete($oldImage);
+        }
 
         $product->update($data);
         return redirect()->route('products')->with('feedback.message', 'Se edito un producto exitosamente.');
