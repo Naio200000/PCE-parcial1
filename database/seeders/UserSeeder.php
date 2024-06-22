@@ -17,6 +17,13 @@ class UserSeeder extends Seeder
             'name' => 'admin',
             'email' => 'admin@komei.com',
             'password' => \Hash::make('Passw0rd'),
+            'admin' => 1,
+        ]);
+        User::create([
+            'name' => 'naio',
+            'email' => 'naio@gmail.com',
+            'password' => \Hash::make('Passw0rd'),
+            'admin' => 0,
         ]);
     }
 }
