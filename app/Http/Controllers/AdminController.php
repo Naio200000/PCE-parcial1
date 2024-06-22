@@ -143,7 +143,7 @@ class AdminController extends Controller {
 
         $oldImage = $product->image;
 
-        if ($r->hasFile('image' && $oldImage !=+ null && \Storage::exists($oldImage))) {
+        if ($r->hasFile('image' && $oldImage != null && \Storage::exists($oldImage))) {
 
             \Storage::delete($oldImage);
         }
@@ -151,14 +151,6 @@ class AdminController extends Controller {
         $product->update($data);
         return redirect()->route('products')->with('feedback.message', 'Se edito un producto exitosamente.');
     }
-
-
-    /*
-                if ($r->hasFile('image')) {
-
-            $data['image'] = $r->file('image')->store('img/productos');
-        }
-     */
 
     /**
      * Funcion para el routeo de la vista de blogs de admin
@@ -197,10 +189,34 @@ class AdminController extends Controller {
         ]);
 
         $data = $r->except('_token');
+
+        $data['image'] = $r->file('image')->store('img/blog');
+        
         Blog::create($data);
 
         return redirect()->route('blog')->with('feedback.message', 'Se publicó la noticia correctamente');
     }
+
+    /*
+        $r->validate([
+            'name'=>'required|min:2',
+            'category_id'=>'required',
+            'descript'=>'required',
+            'price'=>'required|numeric',
+        ]);
+
+        $data = $r->except('_token');
+
+        if ($r->hasFile('image')) {
+
+            $data['image'] = $r->file('image')->store('img/productos');
+
+            Image::read(\Storage::path($data['image']))->coverDown(500, 500)->save();
+        }
+        Producto::create($data);
+    */
+
+
 
     /**
      * Funcion para el routeo de la vista de borrar los blogs de admin

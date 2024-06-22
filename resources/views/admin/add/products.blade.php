@@ -84,8 +84,7 @@
                                 {{-- imagenes --}}
                                 <div class="mb-3 col-12">
                                     <label for="image" class="col-form-label ms-2">Cargue una Imagen<span class="obligatorio fs-4"> *</span></label>
-                                    <input type="file" class="form-control" id="image" placeholder="a" name="image" >
-
+                                    <input type="file" class="form-control" id="image"name="image">
                                     @error('image')
                                         <p class="text-danger">{{$message}}</p>
                                     @enderror

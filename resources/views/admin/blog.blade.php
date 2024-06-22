@@ -39,7 +39,7 @@
                                     <td class="text-capitalize text-center">{{$b->title}}</td>
                                     <td class="text-capitalize text-center">{{$b->user->name}}</td>
                                     <td>{{$b->blog}}</td>
-                                    <td><img class="w-100" src="{{'../img/hero/' . $b->image}}" alt="meg"></td>
+                                    <td><img class="w-100" src="{{\Storage::url($b->image)}}" alt="{{$b->altImage}}"></td>
                                     <td>
                                         <ul>
                                             <li class="btn-editar btn m-1"><a class="fw-bold" href="{{route('edit.blog', ['id' => $b->id])}}">Editar</a></li>
