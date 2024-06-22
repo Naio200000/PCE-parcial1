@@ -40,7 +40,7 @@
                                     <td>{{ implode(' ; ',$p->descript)}}</td>
                                     <td class="text-center">{{$p->category->name}}</td>
                                     <td class="text-center">{{$p->price}}</td>
-                                    <td><img class="w-100" src="{{'../img/productos/' . $p->image}}" alt="{{$p->altImage}}"></td>
+                                    <td><img class="w-100" src="{{ \Storage::url($p->image)}}" alt="{{$p->altImage}}"></td>
                                     <td>
                                         <ul>
                                             <li class="btn-editar btn m-1"><a class="fw-bold" href="{{route('edit.products', ['id' => $p->id])}}">Editar</a></li>

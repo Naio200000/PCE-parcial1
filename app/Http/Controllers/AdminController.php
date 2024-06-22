@@ -60,6 +60,11 @@ class AdminController extends Controller {
         ]);
 
         $data = $r->except('_token');
+
+        if ($r->hasFile('image')) {
+
+            $data['image'] = $r->file('image')->store('img/productos');
+        }
         Producto::create($data);
 
         return redirect()->route('products')->with('feedback.message', 'Se agrego un producto exitosamente.');
