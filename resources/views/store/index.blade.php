@@ -24,13 +24,13 @@
                             <img src="{{ \Storage::url($p->image)}}" alt="{{$p->altImage}}" class="card-img-top">
                             <span class="mx-2 ms-auto capital">{{$p->category->name}}</span>
                             <div class="card-body">
-                                <h4 class="card-title fs-2 titulocard" type="button" id=""><a href="#" class="fs-2 titulocard">{{$p->name}}</a></h4>
+                                <h4 class="card-title fs-2 titulocard" type="button" id=""><a href="{{route('tienda.producto', ['id' => $p->id])}}" class="fs-2 titulocard">{{$p->name}}</a></h4>
                                 <p class="card-text">{{$p->descript[0]}}</p>
                                 <div class="row px2">
                                     <p class="col fw-bold h4">$ <span class="preciocard">{{$p->price}}</span></p>
                                     <div class="col-7">
                                         <div class="row px-0">
-                                            <button class="btn btn-komei col text-uppercase me-2"><a class="text-uppercase" href="{{route('tienda.producto', ['id' => $p->id])}}">Ver mas</a></button>
+                                            <a class=" text-center btn-komei col me-2" href="{{route('tienda.producto', ['id' => $p->id])}}"><button class="btn text-uppercase fw-bold">Ver mas</button></a>
                                         </div>
                                     </div>
                                 </div>
