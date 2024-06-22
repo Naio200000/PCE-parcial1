@@ -188,7 +188,7 @@ class AdminController extends Controller {
         ]);
 
         $data = $r->except('_token');
-
+        $data['user_id'] = auth()->user()->id;
         if ($r->hasFile('image')) {
 
             $data['image'] = $r->file('image')->store('img/blog');
