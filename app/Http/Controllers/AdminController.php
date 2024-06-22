@@ -133,7 +133,6 @@ class AdminController extends Controller {
 
         $data = $r->except('_token');
 
-
         if ($r->hasFile('image')) {
 
             $data['image'] = $r->file('image')->store('img/productos');
@@ -190,33 +189,15 @@ class AdminController extends Controller {
 
         $data = $r->except('_token');
 
-        $data['image'] = $r->file('image')->store('img/blog');
-        
+        if ($r->hasFile('image')) {
+
+            $data['image'] = $r->file('image')->store('img/blog');
+
+        }
         Blog::create($data);
 
         return redirect()->route('blog')->with('feedback.message', 'Se publicó la noticia correctamente');
     }
-
-    /*
-        $r->validate([
-            'name'=>'required|min:2',
-            'category_id'=>'required',
-            'descript'=>'required',
-            'price'=>'required|numeric',
-        ]);
-
-        $data = $r->except('_token');
-
-        if ($r->hasFile('image')) {
-
-            $data['image'] = $r->file('image')->store('img/productos');
-
-            Image::read(\Storage::path($data['image']))->coverDown(500, 500)->save();
-        }
-        Producto::create($data);
-    */
-
-
 
     /**
      * Funcion para el routeo de la vista de borrar los blogs de admin
@@ -241,9 +222,15 @@ class AdminController extends Controller {
      */
     public function actionDelBlog(int $id) {
 
-        $product = Blog::findorfail($id);
+        $blog = Blog::findorfail($id);
 
-        $product->delete();
+        $blog->delete();
+
+        if ($blog->image != null && \Storage::exists($blog->image)) {
+
+            \Storage::delete($blog->image);
+        }
+
         return redirect()->route('blog')->with('feedback.message', 'Se elimino una noticia exitosamente.');
     }
 
@@ -275,9 +262,21 @@ class AdminController extends Controller {
 
         $data = $r->except('_token');
 
-        $product = Blog::findorfail($id);
+        if ($r->hasFile('image')) {
 
-        $product->update($data);
+            $data['image'] = $r->file('image')->store('img/blog');
+        }
+
+        $blog = Blog::findorfail($id);
+
+        $oldImage = $blog->image;
+
+        if ($r->hasFile('image' && $oldImage != null && \Storage::exists($oldImage))) {
+
+            \Storage::delete($oldImage);
+        }
+
+        $blog->update($data);
         return redirect()->route('blog')->with('feedback.message', 'Se edito una noticia exitosamente.');
     }
 }

@@ -18,7 +18,7 @@
             <article>
                 <div class="row g-4 my-2 container mx-auto">
                     <!-- form -->
-                    <form action="{{ route('actions.edit.blog', $blog->id) }}" method="POST">
+                    <form action="{{ route('actions.edit.blog', $blog->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row align-items-start">
                             <!-- Titulo -->
@@ -50,10 +50,22 @@
                             </div>
                             <div class=" col-12 col-sm-6">
                                 {{-- imagenes --}}
-                                <div class="mb-3 col-12 form-floating">
-                                    <input type="text" class="form-control" id="image" placeholder="a" name="image" value="{{old('image',$blog->image)}}">
-                                    <label for="image" class="col-form-label ms-2">Cargue una Imagen<span class="obligatorio fs-4"> *</span></label>
-                                    {{-- <input class="form-control" type="file" id="imagen" name="imagen"> --}}
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="mb-3 col-8">
+                                            <label for="image" class="col-form-label ms-2">Cargue una Imagen<span class="obligatorio fs-4"> *</span></label>
+                                            <input type="file" class="form-control" id="image" name="image" >
+                                        </div>
+                                        <div class="mb-3 col-4">
+                                            <p class="fs-6 w-75 text-center mx-auto">Imagen actual</p>
+                                            @if ($blog->image != null && \Storage::exists($blog->image))
+                                                <img class="img-thumbnail" src="{{ \Storage::url($blog->image)}}" alt="{{$blog->altImage}}">
+                                            @else
+                                                <p class="fs-6 w-75 text-center mx-auto">Sin imagen</p>
+                                            @endif
+
+                                        </div>
+                                    </div>
                                     @error('image')
                                         <p class="text-danger">{{$message}}</p>
                                     @enderror
