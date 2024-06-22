@@ -84,10 +84,22 @@
                                     @enderror
                                 </div>
                                 {{-- imagenes --}}
-                                <div class="mb-3 col-12">
-                                    <label for="image" class="col-form-label ms-2">Cargue una Imagen<span class="obligatorio fs-4"> *</span></label>
-                                    <input type="file" class="form-control" id="image" placeholder="a" name="image" >
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="mb-3 col-8">
+                                            <label for="image" class="col-form-label ms-2">Cargue una Imagen<span class="obligatorio fs-4"> *</span></label>
+                                            <input type="file" class="form-control" id="image" placeholder="a" name="image" >
+                                        </div>
+                                        <div class="mb-3 col-4">
+                                            <p class="fs-6 w-75 text-center mx-auto">Portada actual</p>
+                                            @if ($product->image != null && \Storage::exists($product->image))
+                                                <img class="img-thumbnail" src="{{ \Storage::url($product->image)}}" alt="{{$product->altImage}}">
+                                            @else
+                                                <p class="fs-6 w-75 text-center mx-auto">Sin imagen</p>
+                                            @endif
 
+                                        </div>
+                                    </div>
                                     @error('image')
                                         <p class="text-danger">{{$message}}</p>
                                     @enderror

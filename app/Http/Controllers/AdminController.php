@@ -55,8 +55,6 @@ class AdminController extends Controller {
             'category_id'=>'required',
             'descript'=>'required',
             'price'=>'required|numeric',
-            'image'=>'required',
-            'altImage'=>'required',
         ]);
 
         $data = $r->except('_token');
@@ -91,7 +89,14 @@ class AdminController extends Controller {
 
         $product = Producto::findorfail($id);
 
+
         $product->delete();
+
+        if ($product->image != null && \Storage::exists($product->image)) {
+
+            \Storage::delete($product->image);
+        }
+
         return redirect()->route('products')->with('feedback.message', 'Se elimino un producto exitosamente.');
     }
 
@@ -121,8 +126,6 @@ class AdminController extends Controller {
             'category_id'=>'required',
             'descript'=>'required',
             'price'=>'required|numeric',
-            'image'=>'required',
-            'altImage'=>'required',
         ]);
 
         $data = $r->except('_token');
