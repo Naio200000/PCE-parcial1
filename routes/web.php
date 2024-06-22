@@ -15,6 +15,8 @@ Route::get('login', [\App\Http\Controllers\LoginController::class, 'login'])->na
 Route::post('login', [\App\Http\Controllers\LoginController::class, 'actionLogin'])->name('actions.login');
 Route::post('logout', [\App\Http\Controllers\LoginController::class, 'logout'])->name('actions.logout');
 
+//Register
+Route::get('register', [\App\Http\Controllers\LoginController::class, 'register'])->name('register');
 
 // Tienda
 Route::get('tienda', [\App\Http\Controllers\TiendaController::class, 'index'])->name('tienda.index');

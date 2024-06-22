@@ -23,7 +23,8 @@
                             <label for="password" class="form-label">Contraseña</label>
                         </div>
                         <button type="submit" class="btn btn-komei mb-3 fw-bold ms-auto w-100">Login</button>
-                        <button type="submit" class="btn btn-komei bg-primary-subtle fw-bold ms-auto w-100">Registrarse</button>
+                        <a href="{{route('register')}}"><p class="btn btn-komei bg-primary-subtle fw-bold ms-auto w-100">Registrarse</p></a>
+
                     </form>
                 </div>
             </div>
