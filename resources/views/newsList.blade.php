@@ -6,19 +6,28 @@
 
 <x-storeTemplate>
     <x-slot:title>Noticias::</x-slot:title>
-    <section class="hero">
-
-    <pre>
-        {{$newsList}}
-    </pre>
+    <section class="tienda">
+        <h2 class="titulo-seccion w-75 w-lg-100 text-uppercase text-center my-2 mx-auto px-2">Noticias</h2>
     </section>
-    {{-- <section class="home container-fluid container-md">
-        <h2 class="titulo-seccion w-75 w-lg-100 text-uppercase text-center fw-bold mt-2 mb-5 mx-auto px-2">{{$news->title}}</h2>
-        <div>
-            <img class="d-block w-100"  src="{{'../img/hero/' . $news->image}}" alt="{{$news->altImage}}">
-        </div>
-        <p class="mt-3 pe-md-3 fs-5 w-75 mx-auto">{!! $news->blog !!}</p>
-        <p class="mt-3 pe-md-3 fs-5 w-75 ms-auto fw-bold">Publicado por {{ $news->user->name }}</p>
-    </section> --}}
-
+    <section class="home container-fluid container-md">
+        @foreach ($newsList as $news)
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{'./img/hero/' . $news->image}}" class="img-fluid rounded-start" alt="{{$news->altImage}}">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">{{$news->title}}</h5>
+                            <p class="card-text">{{$news->blog}}</p>
+                            <div class="d-flex justify-content-between">
+                                <p class="card-text"><small class="text-body-secondary">Publicado por {{ $news->user->name }}</small></p>
+                                <p class="card-text"><a class="text-body-secondary" href="{{route('news', ['id' => $news->id])}}">VER MAS</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </section>
 </x-storeTemplate>

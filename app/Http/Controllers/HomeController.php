@@ -32,6 +32,9 @@ class HomeController extends Controller {
     public function newsList() {
 
         $newsList = Blog::query()->orderby('id','desc')->get();
+        foreach ($newsList as $n) {
+            $n->blog = $n->fronNews();
+        }
 
         return view('newsList', [
             'newsList' => $newsList,
