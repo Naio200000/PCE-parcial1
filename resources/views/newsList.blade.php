@@ -14,7 +14,7 @@
             <div class="card mb-3">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="{{'./img/hero/' . $news->image}}" class="img-fluid rounded-start" alt="{{$news->altImage}}">
+                        <img src="{{'storage/img/hero/' . $news->image}}" class="img-fluid rounded-start" alt="{{$news->altImage}}">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">

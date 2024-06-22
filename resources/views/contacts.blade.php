@@ -17,7 +17,7 @@
                     <div class="accordion-body">
                         <div>
                             <div class="d-flex flex-column flex-sm-row justify-content-evenly align-items-center align-items-lg-start mb-4">
-                                <img class="my-1 imagen-perfil" src="./img/dojos/dario-perfil.webp" alt="Foto de perfil de Dario Sensei">
+                                <img class="my-1 imagen-perfil" src="storage/img/dojos/dario-perfil.webp" alt="Foto de perfil de Dario Sensei">
                                 <ul class="my-1">
                                     <li>Dario Vega Sensei</li>
                                     <li>Av. de los Constituyentes 4584</li>
@@ -46,7 +46,7 @@
                     <div class="accordion-body">
                         <div>
                             <div class="d-flex flex-column flex-sm-row justify-content-evenly align-items-center align-items-lg-start mb-4">
-                                <img class="my-1 imagen-perfil" src="./img/dojos/javier-perfil.webp" alt="Foto de perfil de Javier sensei">
+                                <img class="my-1 imagen-perfil" src="storage/img/dojos/javier-perfil.webp" alt="Foto de perfil de Javier sensei">
                                 <ul class="my-1">
                                     <li>Javier Alberdi Sensei</li>
                                     <li>Mendoza 1430</li>
@@ -75,7 +75,7 @@
                     <div class="accordion-body">
                         <div>
                             <div class="d-flex flex-column flex-sm-row justify-content-evenly align-items-center align-items-lg-start mb-4">
-                                <img class="my-1 imagen-perfil" src="./img/dojos/jorge-perfil.webp" alt="Foto de perfil de Jorge Sensei">
+                                <img class="my-1 imagen-perfil" src="storage/img/dojos/jorge-perfil.webp" alt="Foto de perfil de Jorge Sensei">
                                 <ul class="my-1">
                                     <li>Jorge Ruiz Sensei</li>
                                     <li>Espejo N°1179</li>
@@ -104,7 +104,7 @@
                     <div class="accordion-body">
                         <div>
                             <div class="d-flex flex-column flex-sm-row justify-content-evenly align-items-center align-items-lg-start mb-4">
-                                <img class="my-1 imagen-perfil" src="./img/dojos/horacio-perfil.webp" alt="Foto de Perfil de Horacio Sensei">
+                                <img class="my-1 imagen-perfil" src="storage/img/dojos/horacio-perfil.webp" alt="Foto de Perfil de Horacio Sensei">
                                 <ul class="my-1">
                                     <li>Horacio Machado Sensei</li>
                                     <li>Calle 6 esquina 153</li>
