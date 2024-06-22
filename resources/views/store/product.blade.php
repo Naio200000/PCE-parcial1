@@ -16,11 +16,11 @@
                     <div id="carouselProductoImagen" class="carousel slide mx-auto" data-bs-ride="true">
                         <div class="carousel-inner p-5" id="carrusel-producto">
                             <div class="carousel-item active">
-                                <img class="card-img-top" src="{{'../../img/productos/' . $producto->image}}" alt="{{$producto->altImage}}">
+                                <img class="card-img-top" src="{{\Storage::url($producto->image)}}" alt="{{$producto->altImage}}">
                             </div>
                         </div>
                     </div>
-                    <span class="text-uppercase p-2 text-lg-start text-end">{{$producto->category}}</span>
+                    <span class="text-uppercase p-2 text-lg-start text-end">{{$producto->category->name}}</span>
                 </div>
                 <div class="col-lg-6 d-flex flex-column p-3">
                     <div class="card-body flex-grow-0">

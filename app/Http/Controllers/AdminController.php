@@ -127,11 +127,24 @@ class AdminController extends Controller {
 
         $data = $r->except('_token');
 
+        if ($r->hasFile('image')) {
+
+            $data['image'] = $r->file('image')->store('img/productos');
+        }
+
         $product = Producto::findorfail($id);
 
         $product->update($data);
         return redirect()->route('products')->with('feedback.message', 'Se edito un producto exitosamente.');
     }
+
+
+    /*
+                if ($r->hasFile('image')) {
+
+            $data['image'] = $r->file('image')->store('img/productos');
+        }
+     */
 
     /**
      * Funcion para el routeo de la vista de blogs de admin

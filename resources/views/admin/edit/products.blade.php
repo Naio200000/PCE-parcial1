@@ -19,7 +19,7 @@
             <article>
                 <div class="row g-4 my-2 container mx-auto">
                     <!-- form -->
-                    <form action="{{ route('actions.edit.products', $product->id) }}" method="POST">
+                    <form action="{{ route('actions.edit.products', $product->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row align-items-start">
                             <!-- Titulo -->
@@ -84,10 +84,10 @@
                                     @enderror
                                 </div>
                                 {{-- imagenes --}}
-                                <div class="mb-3 col-12 form-floating">
-                                    <input type="text" class="form-control" id="image" placeholder="a" name="image" value="{{old('image',$product->image)}}">
+                                <div class="mb-3 col-12">
                                     <label for="image" class="col-form-label ms-2">Cargue una Imagen<span class="obligatorio fs-4"> *</span></label>
-                                    {{-- <input class="form-control" type="file" id="imagen" name="imagen"> --}}
+                                    <input type="file" class="form-control" id="image" placeholder="a" name="image" >
+
                                     @error('image')
                                         <p class="text-danger">{{$message}}</p>
                                     @enderror

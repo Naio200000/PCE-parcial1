@@ -21,7 +21,7 @@
                     @foreach ($productos as $p)
                     <div class="col">
                         <div class="card tarjetas-producto">
-                            <img src="{{'storage/img/productos/' . $p->image}}" alt="{{$p->altImage}}" class="card-img-top">
+                            <img src="{{ \Storage::url($p->image)}}" alt="{{$p->altImage}}" class="card-img-top">
                             <span class="mx-2 ms-auto capital">{{$p->category->name}}</span>
                             <div class="card-body">
                                 <h4 class="card-title fs-2 titulocard" type="button" id=""><a href="#" class="fs-2 titulocard">{{$p->name}}</a></h4>

@@ -16,7 +16,7 @@ resources/views/store/product.blade.php<?php
                     <div id="carouselProductoImagen" class="carousel slide mx-auto" data-bs-ride="true">
                         <div class="carousel-inner p-5" id="carrusel-producto">
                             <div class="carousel-item active">
-                                <img class="card-img-top" src="{{'../../../img/productos/' . $product->image}}" alt="{{$product->altImage}}">
+                                <img class="card-img-top" src="{{\Storage::url($product->image)}}" alt="{{$product->altImage}}">
                             </div>
                         </div>
                     </div>
