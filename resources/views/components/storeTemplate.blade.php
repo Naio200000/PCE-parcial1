@@ -70,6 +70,7 @@
                         <div class=" text-center text-sm-end">
                             @if (!auth()->check())
                                 <a href="{{route('login')}}"><p class="btn btn-komei text-center text-sm-end  fw-bold">Login</p></a>
+                                <a href="{{route('register')}}"><p class="btn btn-komei text-center text-sm-end  fw-bold">Registrarse</p></a>
                             @else
                                 <form action="{{route('actions.logout')}}" method="POST">
                                     @csrf

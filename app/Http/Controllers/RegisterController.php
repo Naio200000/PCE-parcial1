@@ -29,7 +29,7 @@ class RegisterController extends Controller
 
 
         //cambiar
-        return redirect()->route('tienda.index')->with('feedback.message', 'Bienvenido.');
+        return redirect()->route('login')->with('feedback.message', 'Se ha registrado exitosamente.');
     }
 
 }
