@@ -1,4 +1,4 @@
-<?php
+RegisterController<?php
 
 ?>
 
