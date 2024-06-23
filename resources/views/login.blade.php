@@ -24,7 +24,6 @@
                         </div>
                         <button type="submit" class="btn btn-komei mb-3 fw-bold ms-auto w-100">Login</button>
                         <a href="{{route('register')}}"><p class="btn btn-komei bg-success-subtle fw-bold ms-auto w-100">Registrarse</p></a>
-
                     </form>
                 </div>
             </div>
