@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -65,7 +66,7 @@ class User extends Authenticatable {
      * @return array<string, string>
      */
     protected function casts() :array {
-        
+
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
@@ -78,5 +79,11 @@ class User extends Authenticatable {
     public function posts() {
 
         return $this->hasMany(Blog::class);
+    }
+
+
+    public function compras () :BelongsToMany{
+
+        return $this->belongsToMany(Producto::class, 'compras');
     }
 }

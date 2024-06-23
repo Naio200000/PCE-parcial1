@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Producto;
 use App\Models\Blog;
 use App\Models\Category;
+use App\Models\User;
 use Intervention\Image\Laravel\Facades\Image;
 
 class AdminController extends Controller {
@@ -278,5 +279,14 @@ class AdminController extends Controller {
 
         $blog->update($data);
         return redirect()->route('blog')->with('feedback.message', 'Se edito una noticia exitosamente.');
+    }
+
+    public function users() {
+
+        $users = User::with('compras')->get();
+
+        return view('admin.home', [
+            'users' => $users,
+        ]);
     }
 }

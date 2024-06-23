@@ -26,6 +26,7 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="{{route('products')}}">Productos</a></li>
                                 <li><a class="dropdown-item" href="{{route('blog')}}">Blog</a></li>
+                                <li><a class="dropdown-item" href="{{route('users')}}">Usuarios</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
