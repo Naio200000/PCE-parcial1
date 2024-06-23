@@ -41,15 +41,18 @@
                             <li class="nav-item">
                                 <a class="nav-link active text-center text-sm-end" aria-current="page" href="{{route('nosotros')}}">Nosotros</a>
                             </li>
-                            <li class="nav-item dropdown">
+                            <li>
+                                <a class="nav-link active text-center text-sm-end" aria-current="page" href="{{route('tienda.index')}}">Catalogo Completo</a>
+                            </li>
+                            {{-- <li class="nav-item dropdown">
                                 <a class="nav-link active text-center text-sm-end dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="{{route('tienda.index')}}">Catalogo Completo</a></li>
-                                    {{-- <li><a class="dropdown-item text-capitalize" href="{{url('/tienda/clases')}}">Clases</a></li>
+                                    <li><a class="dropdown-item text-capitalize" href="{{url('/tienda/clases')}}">Clases</a></li>
                                     <li><a class="dropdown-item text-capitalize" href="{{url('/tienda/ropa')}}">Ropa</a></li>
-                                    <li><a class="dropdown-item text-capitalize" href="{{url('/tienda/equipos')}}">Equipos</a></li> --}}
+                                    <li><a class="dropdown-item text-capitalize" href="{{url('/tienda/equipos')}}">Equipos</a></li>
                                 </ul>
-                            </li>
+                            </li> --}}
                             <li class="nav-item">
                                 <a class="nav-link active text-center text-sm-end " aria-current="page" href="{{route('contactos')}}">Contactos</a>
                             </li>
@@ -59,7 +62,7 @@
                             @if (auth()->check())
                                 @if (auth()->user()->admin)
                                     <li class="nav-item">
-                                        <a href="{{route('dash')}}"><p class="nav-link active text-center text-sm-end ">admin</p></a>
+                                        <a href="{{route('dash')}}"><p class="nav-link active text-center text-sm-end ">Administrador</p></a>
                                     </li>
                                 @endif
                             @endif
