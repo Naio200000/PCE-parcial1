@@ -289,4 +289,13 @@ class AdminController extends Controller {
             'users' => $users,
         ]);
     }
+
+    public function viewPurchases (int $id) {
+
+        $user = User::findOrFail($id);
+
+        return view('admin.compras', [
+            'user' => $user
+        ]);
+    }
 }

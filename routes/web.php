@@ -49,8 +49,8 @@ Route::get('admin/usuarios', [\App\Http\Controllers\AdminController::class,'user
         ->name('users')
         ->middleware('auth')
         ->middleware('checkAdmin');
-Route::get('admin/usuarios/{id}', [\App\Http\Controllers\AdminController::class,'viewUser'])
-        ->name('admin.user')
+Route::get('admin/usuarios/{id}', [\App\Http\Controllers\AdminController::class,'viewPurchases'])
+        ->name('admin.compras')
         ->whereNumber('id')
         ->middleware('auth')
         ->middleware('checkAdmin');
