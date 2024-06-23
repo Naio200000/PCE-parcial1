@@ -44,6 +44,10 @@ Route::get('admin/blog', [\App\Http\Controllers\AdminController::class,'blog'])
         ->name('blog')
         ->middleware('auth')
         ->middleware('checkAdmin');
+Route::get('admin/usuarios', [\App\Http\Controllers\AdminController::class,'users'])
+        ->name('users')
+        ->middleware('auth')
+        ->middleware('checkAdmin');
 
 // Abm Productos
 Route::get('admin/agregar/productos', [\App\Http\Controllers\AdminController::class,'addProducts'])

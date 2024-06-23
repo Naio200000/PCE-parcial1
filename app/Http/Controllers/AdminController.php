@@ -285,7 +285,7 @@ class AdminController extends Controller {
 
         $users = User::with('compras')->get();
 
-        return view('admin.home', [
+        return view('admin.user', [
             'users' => $users,
         ]);
     }
