@@ -35,7 +35,7 @@
                                     <td class="text-capitalize text-center">{{($u->admin) ? 'admin': 'cliente'}}</td>
                                     <td class="text-capitalize text-center">
                                         @if ($u->compras)
-                                            <a href=""><p class="btn btn-komei">Ver compras</p></a>
+                                            <a href="{{route('admin.user', ['id' => $u->id])}}"><p class="btn btn-komei">Ver compras</p></a>
                                         @else
                                             <p>No ha realizado compras</p>
                                         @endif

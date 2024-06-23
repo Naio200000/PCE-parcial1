@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Middleware\CheckAdmin;
 use Illuminate\Support\Facades\Route;
@@ -46,6 +47,11 @@ Route::get('admin/blog', [\App\Http\Controllers\AdminController::class,'blog'])
         ->middleware('checkAdmin');
 Route::get('admin/usuarios', [\App\Http\Controllers\AdminController::class,'users'])
         ->name('users')
+        ->middleware('auth')
+        ->middleware('checkAdmin');
+Route::get('admin/usuarios/{id}', [\App\Http\Controllers\AdminController::class,'viewUser'])
+        ->name('admin.user')
+        ->whereNumber('id')
         ->middleware('auth')
         ->middleware('checkAdmin');
 
