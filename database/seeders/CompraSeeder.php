@@ -20,19 +20,19 @@ class CompraSeeder extends Seeder
             ],
             [
                 'user_id' => 2,
-                'producto_id' => 2,
+                'producto_id' => 13,
             ],
             [
                 'user_id' => 2,
-                'producto_id' => 3,
+                'producto_id' => 4,
             ],
             [
                 'user_id' => 1,
-                'producto_id' => 2,
+                'producto_id' => 16,
             ],
             [
                 'user_id' => 1,
-                'producto_id' => 3,
+                'producto_id' => 5,
             ],
         ]);
     }
