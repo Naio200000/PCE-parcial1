@@ -17,7 +17,7 @@ class ProductosSeeder extends Seeder
             [
                 'id' => 1,
                 'name' => '1 Clase grupal',
-                'descript' => 'Disfruta de una clase por semana en los días que prefieras    ;     Te invitamos a participar una clase semanal para el uso de la <span lang="ja">katana</span> japonesa (esgrima samurai). En la misma podrás ver los fundamentos básicos de uso de la katana japonés. Todo el material lo provee el dojo, solo necesitas ropa cómoda.',
+                'descript' => 'Disfruta de una clase por semana en los días que prefieras    ;     Te invitamos a participar una clase semanal para el uso de la katana japonesa (esgrima samurai). En la misma podrás ver los fundamentos básicos de uso de la katana japonés. Todo el material lo provee el dojo, solo necesitas ropa cómoda.',
                 'image' => 'img/productos/1700660241.webp',
                 'altImage' => '',
                 'category_id' => 3,
@@ -28,7 +28,7 @@ class ProductosSeeder extends Seeder
             [
                 'id' => 2,
                 'name' => '2 Clase grupal',
-                'descript' => 'Disfruta de dos clase por semana en los días que prefieras; Te invitamos a participar dos clase semanal para el uso de la <span lang="ja">katana</span> japonesa (esgrima samurai). En la misma podrás ver los fundamentos básicos de uso de la katana japonés. Todo el material lo provee el dojo, solo necesitas ropa cómoda.',
+                'descript' => 'Disfruta de dos clase por semana en los días que prefieras; Te invitamos a participar dos clase semanal para el uso de la katana japonesa (esgrima samurai). En la misma podrás ver los fundamentos básicos de uso de la katana japonés. Todo el material lo provee el dojo, solo necesitas ropa cómoda.',
                 'image' => 'img/productos/1700660241.webp',
                 'altImage' => '',
                 'category_id' => 3,
@@ -39,7 +39,7 @@ class ProductosSeeder extends Seeder
             [
                 'id' => 3,
                 'name' => '3 Clase grupal',
-                'descript' => 'Disfruta de dos clase por semana en los días que prefieras; Te invitamos a participar dos clase semanal para el uso de la <span lang="ja">katana</span> japonesa (esgrima samurai). En la misma podrás ver los fundamentos básicos de uso de la katana japonés. Todo el material lo provee el dojo, solo necesitas ropa cómoda.',
+                'descript' => 'Disfruta de dos clase por semana en los días que prefieras; Te invitamos a participar dos clase semanal para el uso de la katana japonesa (esgrima samurai). En la misma podrás ver los fundamentos básicos de uso de la katana japonés. Todo el material lo provee el dojo, solo necesitas ropa cómoda.',
                 'image' => 'img/productos/1700660285.webp',
                 'altImage' => '',
                 'category_id' => 3,
@@ -72,7 +72,7 @@ class ProductosSeeder extends Seeder
             [
                 'id' => 6,
                 'name' => 'Hakama',
-                'descript' => 'Hakama para entrenamiento, 100% Tetron; Excelentes hakamas de tetrón para el entrenamiento de <span lang="ja">iaido, kendo, aikido</span> y demas artes marciales. Tela antiarrugas con una composición de 65% poliester y 35% de rayón que asegura la permanencia de las tablas sin mayor esfuerzo de planchado. Elaboradas a mano y cosidas individualmente.',
+                'descript' => 'Hakama para entrenamiento, 100% Tetron; Excelentes hakamas de tetrón para el entrenamiento de iaido, kendo, aikido y demas artes marciales. Tela antiarrugas con una composición de 65% poliester y 35% de rayón que asegura la permanencia de las tablas sin mayor esfuerzo de planchado. Elaboradas a mano y cosidas individualmente.',
                 'image' => 'img/productos/hakama-02.webp',
                 'altImage' => '',
                 'category_id' => 1,
@@ -83,7 +83,7 @@ class ProductosSeeder extends Seeder
             [
                 'id' => 7,
                 'name' => 'Shinken Premuim',
-                'descript' => 'Katana de entenamiento con filo, Hecha en acero 1095; Una katanas hechas de manera tradicional es <span lang="ja">nihonto</span> (literalmente "espada japonesa"). forjada a partir de acero <span lang="ja">tamahagane</span>.',
+                'descript' => 'Katana de entenamiento con filo, Hecha en acero 1095; Una katanas hechas de manera tradicional es nihonto (literalmente "espada japonesa"). forjada a partir de acero tamahagane.',
                 'image' => 'img/productos/katana-01.webp',
                 'altImage' => '',
                 'category_id' => 2,
@@ -94,7 +94,7 @@ class ProductosSeeder extends Seeder
             [
                 'id' => 8,
                 'name' => 'Iaito',
-                'descript' => 'Katana de entenamiento sin filo, hecha dealeacion de Aluminio; Una katanas hechas de manera moderna es <span lang="ja">mugito</span> (literalmente "espada de exhhibición"). forjada a partir de una aleación de aluminio.',
+                'descript' => 'Katana de entenamiento sin filo, hecha dealeacion de Aluminio; Una katanas hechas de manera moderna es mugito (literalmente "espada de exhhibición"). forjada a partir de una aleación de aluminio.',
                 'image' => 'img/productos/1700660964.webp',
                 'altImage' => '',
                 'category_id' => 2,
@@ -105,7 +105,7 @@ class ProductosSeeder extends Seeder
             [
                 'id' => 9,
                 'name' => 'Bokuto',
-                'descript' => 'Katana de madera para entrenamiento, con saya de plastico; Una katanas hechas de madera es <span lang="ja">bokuto</span> (literalmente "espada de madera"). tallada en diversas maderas para mejorar su relación con el peso',
+                'descript' => 'Katana de madera para entrenamiento, con saya de plastico; Una katanas hechas de madera es bokuto (literalmente "espada de madera"). tallada en diversas maderas para mejorar su relación con el peso',
                 'image' => 'img/productos/elHO3Ocmr10PCvnZHvJ2ZXPKB7n8vcwA8156UMs6.webp',
                 'altImage' => '',
                 'category_id' => 2,
@@ -116,7 +116,7 @@ class ProductosSeeder extends Seeder
             [
                 'id' => 10,
                 'name' => 'Hakama de Gala',
-                'descript' => 'Hakama para exibicion, 100% Lana; Excelentes hakamas de Lana para seremoñas o exibiciones de <span lang="ja">iaido, aikido</span> y demas artes marciales. 100% Hilos de lana Mercerizada con un patron a rayas. Elaboradas a mano y cosidas individualmente.',
+                'descript' => 'Hakama para exibicion, 100% Lana; Excelentes hakamas de Lana para seremoñas o exibiciones de iaido, aikido y demas artes marciales. 100% Hilos de lana Mercerizada con un patron a rayas. Elaboradas a mano y cosidas individualmente.',
                 'image' => 'img/productos/hakama-gala-01.webp',
                 'altImage' => '',
                 'category_id' => 1,
@@ -127,7 +127,7 @@ class ProductosSeeder extends Seeder
             [
                 'id' => 11,
                 'name' => 'Montsuki',
-                'descript' => 'Hakama para exibicion, 100% Lana; Excelentes hakamas de Lana para seremoñas o exibiciones de <span lang="ja">iaido, aikido</span> y demas artes marciales. 100% Hilos de lana Mercerizada con un patron a rayas. Elaboradas a mano y cosidas individualmente.',
+                'descript' => 'Hakama para exibicion, 100% Lana; Excelentes hakamas de Lana para seremoñas o exibiciones de iaido, aikido y demas artes marciales. 100% Hilos de lana Mercerizada con un patron a rayas. Elaboradas a mano y cosidas individualmente.',
                 'image' => 'img/productos/montsuki-01.webp',
                 'altImage' => '',
                 'category_id' => 1,
@@ -149,7 +149,7 @@ class ProductosSeeder extends Seeder
             [
                 'id' => 13,
                 'name' => 'Shinken',
-                'descript' => 'Sandalia de Igusa y Algodón; <span lang="ja">Setta</span> es una fina y elegante sandalia japonesa hecha de Igusa, una planta utilizada para hacer tatamis tradicionales, y una tira de algodón mullido',
+                'descript' => 'Sandalia de Igusa y Algodón; Setta es una fina y elegante sandalia japonesa hecha de Igusa, una planta utilizada para hacer tatamis tradicionales, y una tira de algodón mullido',
                 'image' => 'img/productos/1700660784.webp',
                 'altImage' => '',
                 'category_id' => 2,
@@ -182,7 +182,7 @@ class ProductosSeeder extends Seeder
             [
                 'id' => 16,
                 'name' => '1 Clase personal',
-                'descript' => 'Disfruta clase personal una vez por semana en los días que prefieras; Te invitamos a participar de 1 clase personales por semana para aprender el uso de la <span lang="ja">katana</span> japonesa (esgrima samurai). En la misma podrás ver los fundamentos básicos de uso de la katana japonés. Todo el material lo provee el dojo, solo necesitas ropa cómoda.',
+                'descript' => 'Disfruta clase personal una vez por semana en los días que prefieras; Te invitamos a participar de 1 clase personales por semana para aprender el uso de la katana japonesa (esgrima samurai). En la misma podrás ver los fundamentos básicos de uso de la katana japonés. Todo el material lo provee el dojo, solo necesitas ropa cómoda.',
                 'image' => 'img/productos/1700593128.webp',
                 'altImage' => '',
                 'category_id' => 3,
@@ -193,7 +193,7 @@ class ProductosSeeder extends Seeder
             [
                 'id' => 17,
                 'name' => '2 Clases personales',
-                'descript' => 'Disfruta de 2 clases personales por semana en los días que prefieras; Te invitamos a participar de 3 clases personales por semana para aprender el uso de la <span lang="ja">katana</span> japonesa (esgrima samurai). En la misma podrás ver los fundamentos básicos de uso de la katana japonés. Todo el material lo provee el dojo, solo necesitas ropa cómoda.',
+                'descript' => 'Disfruta de 2 clases personales por semana en los días que prefieras; Te invitamos a participar de 3 clases personales por semana para aprender el uso de la katana japonesa (esgrima samurai). En la misma podrás ver los fundamentos básicos de uso de la katana japonés. Todo el material lo provee el dojo, solo necesitas ropa cómoda.',
                 'image' => 'img/productos/1700660039.webp',
                 'altImage' => '',
                 'category_id' => 3,
@@ -204,7 +204,7 @@ class ProductosSeeder extends Seeder
             [
                 'id' => 18,
                 'name' => '3 Clases personales',
-                'descript' => 'Disfruta de 3 clase personales por semana en los días que prefieras; Te invitamos a participar de 3 clases personales por semana para aprender el uso de la <span lang="ja">katana</span> japonesa (esgrima samurai). En la misma podrás ver los fundamentos básicos de uso de la katana japonés. Todo el material lo provee el dojo, solo necesitas ropa cómoda.',
+                'descript' => 'Disfruta de 3 clase personales por semana en los días que prefieras; Te invitamos a participar de 3 clases personales por semana para aprender el uso de la katana japonesa (esgrima samurai). En la misma podrás ver los fundamentos básicos de uso de la katana japonés. Todo el material lo provee el dojo, solo necesitas ropa cómoda.',
                 'image' => 'img/productos/1700660207.webp',
                 'altImage' => '',
                 'category_id' => 3,
